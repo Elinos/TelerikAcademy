@@ -9,4 +9,3 @@ class TwoStrings
         Console.WriteLine("The sentence using \\\'s:\n{0}\n\nAnd the same sentence using quoted string:\n{1}", sentence, sameSentence);
     }
 }
-

@@ -19,7 +19,7 @@ class RecordOfEmployees
         idNumber = 183739892;
         employeeNumber = 27565432;
 
-        Console.WriteLine("This is the date for eployee No. {0}", employeeNumber);
+        Console.WriteLine("This is the data for employee No. {0}", employeeNumber);
         Console.WriteLine("First name: {0}", firstName);
         Console.WriteLine("Family name: {0}", familyName);
         Console.WriteLine("Age: {0}", age);
