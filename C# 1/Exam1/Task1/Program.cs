@@ -29,7 +29,6 @@ class Program
             else
             {
                 Console.WriteLine("No {0:f2}", Math.Abs(sumOfMachineCoins - (A - P)));
-
             }
         }
     }
