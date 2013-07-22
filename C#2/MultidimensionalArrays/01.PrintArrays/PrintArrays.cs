@@ -1,7 +1,7 @@
 ﻿//1. Write a program that fills and prints a matrix of size (n, n)
 using System;
 
-class PrintArrays
+public class PrintArrays
 {
     static void Main()
     {

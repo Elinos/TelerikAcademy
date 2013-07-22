@@ -2,7 +2,7 @@
 //and finds in it the square 3 x 3 that has maximal sum of its elements.
 using System;
 
-class MaximalSumOfSquareInMatrixrogram
+class MaximalSumOfSquareInMatrix
 {
     static void Main()
     {

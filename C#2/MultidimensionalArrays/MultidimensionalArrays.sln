@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.PrintArrays", "01.PrintA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MaximalSumOfSquareInMatrix", "02.MaximalSumOfSquareInMatrix\02.MaximalSumOfSquareInMatrix.csproj", "{6DAF10A9-8A5E-4B20-B550-A29F5CAD96D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.EqualStringsInMatrix", "03.EqualStringsInMatrix\03.EqualStringsInMatrix.csproj", "{0C678C71-8256-40B6-B443-362E5089DEB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{6DAF10A9-8A5E-4B20-B550-A29F5CAD96D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DAF10A9-8A5E-4B20-B550-A29F5CAD96D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DAF10A9-8A5E-4B20-B550-A29F5CAD96D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C678C71-8256-40B6-B443-362E5089DEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C678C71-8256-40B6-B443-362E5089DEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C678C71-8256-40B6-B443-362E5089DEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C678C71-8256-40B6-B443-362E5089DEB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
