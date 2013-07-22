@@ -10,7 +10,7 @@ class EqualStringsInMatrix
     {
         int cellSize = matrix[0, 0].Length;
         foreach (string cell in matrix) cellSize = Math.Max(cellSize, cell.Length);
-
+        Console.WriteLine("The matrix is:");
         for (int i = 0; i < matrix.GetLength(0); i++)
             for (int j = 0; j < matrix.GetLength(1); j++)
                 Console.Write(matrix[i, j].PadRight(cellSize, ' ') + (j != matrix.GetLength(1) - 1 ? " " : "\n"));
@@ -65,7 +65,7 @@ class EqualStringsInMatrix
                 FindLongestSequence(matrix, used, i, j);
 
         PrintMatrix(matrix);
-        Console.WriteLine(maxValue + " " + maxSum);
+        Console.WriteLine("\nMax sequence is from string \"{0}\" with count {1}", maxValue ,maxSum);
     }
 }
 

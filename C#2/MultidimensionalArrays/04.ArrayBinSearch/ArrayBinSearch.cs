@@ -38,7 +38,7 @@ class ArrayBinSearch
         }
         else
         {
-            Console.WriteLine("Number {0} found at index [{1}]",array[maxNumberIndex], maxNumberIndex);
+            Console.WriteLine("Number {0}(that is <= K) found at index [{1}]",array[maxNumberIndex], maxNumberIndex);
         }
     }
 }

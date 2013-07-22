@@ -15,6 +15,10 @@ class SortByLength
 	    "nice",
 	    "!!!"
 	};
+        Console.WriteLine("Unsorted:");
+        foreach (string str in array)
+            Console.WriteLine(str);
+        Console.WriteLine("\nSorted:");
         foreach (string str in SortByLengthIe(array))
             Console.WriteLine(str);
     }
