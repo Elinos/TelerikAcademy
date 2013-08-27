@@ -1,0 +1,1 @@
+﻿When Dictionary, or any object that implements IDictionary, is used in a foreach-loop, it returns an enumeration. In the case of Dictionary, this enumeration is in the form of KeyValuePair values.
