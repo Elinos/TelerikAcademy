@@ -1,0 +1,3 @@
+I would like to generate random text in  Studio.
+This text will be used in an input control or for a similar purpose.
+
