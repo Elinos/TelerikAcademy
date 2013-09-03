@@ -1,0 +1,1 @@
+﻿"C# is not C++, not PHP and not Delphi!"

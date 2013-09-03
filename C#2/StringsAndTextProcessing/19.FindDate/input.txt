@@ -1,0 +1,1 @@
+﻿I'm trying to write a function for a cell which refers to a date in another cell - which if it is between 01.01.1994 and 31.12.1995 the cell will read U16, but if the date is between 01.01.1996 and 31.12.1997 it will read U14 and if the date is later than 01.01.1998, it will read U12.
