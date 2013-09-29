@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PerformanceReport>
+  <FunctionSummary>
+    <Function FunctionName="System.Console.SetCursorPosition" InclSamples="1 568" ExclSamples="1 504" InclSamplesPercent="16,76" ExclSamplesPercent="16,07" />
+    <Function FunctionName="System.Console.Write" InclSamples="1 372" ExclSamples="1 367" InclSamplesPercent="14,66" ExclSamplesPercent="14,61" />
+    <Function FunctionName="System.Console.set_BackgroundColor" InclSamples="1 338" ExclSamples="1 338" InclSamplesPercent="14,30" ExclSamplesPercent="14,30" />
+    <Function FunctionName="System.Console.set_ForegroundColor" InclSamples="1 336" ExclSamples="1 336" InclSamplesPercent="14,28" ExclSamplesPercent="14,28" />
+    <Function FunctionName="System.Console.ResetColor" InclSamples="1 127" ExclSamples="1 127" InclSamplesPercent="12,04" ExclSamplesPercent="12,04" />
+    <Function FunctionName="System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize" InclSamples="919" ExclSamples="711" InclSamplesPercent="9,82" ExclSamplesPercent="7,60" />
+    <Function FunctionName="[clr.dll]" InclSamples="562" ExclSamples="552" InclSamplesPercent="6,01" ExclSamplesPercent="5,90" />
+    <Function FunctionName="System.Console.set_CursorVisible" InclSamples="306" ExclSamples="306" InclSamplesPercent="3,27" ExclSamplesPercent="3,27" />
+    <Function FunctionName="BattleSity.Collision.CanFireMove" InclSamples="415" ExclSamples="289" InclSamplesPercent="4,44" ExclSamplesPercent="3,09" />
+    <Function FunctionName="System.IO.TextWriter+SyncTextWriter.Write" InclSamples="85" ExclSamples="85" InclSamplesPercent="0,91" ExclSamplesPercent="0,91" />
+    <Function FunctionName="System.Console.get_KeyAvailable" InclSamples="78" ExclSamples="75" InclSamplesPercent="0,83" ExclSamplesPercent="0,80" />
+    <Function FunctionName="System.IO.StreamReader..ctor" InclSamples="74" ExclSamples="74" InclSamplesPercent="0,79" ExclSamplesPercent="0,79" />
+    <Function FunctionName="BattleSity.Collision.CanTankMove" InclSamples="101" ExclSamples="71" InclSamplesPercent="1,08" ExclSamplesPercent="0,76" />
+    <Function FunctionName="System.Threading.Thread.Sleep" InclSamples="52" ExclSamples="52" InclSamplesPercent="0,56" ExclSamplesPercent="0,56" />
+    <Function FunctionName="System.String.Format" InclSamples="50" ExclSamples="48" InclSamplesPercent="0,53" ExclSamplesPercent="0,51" />
+    <Function FunctionName="[Telerik.CodeWeaver.Profiler.dll]" InclSamples="315" ExclSamples="35" InclSamplesPercent="3,37" ExclSamplesPercent="0,37" />
+    <Function FunctionName="System.Console.Beep" InclSamples="26" ExclSamples="26" InclSamplesPercent="0,28" ExclSamplesPercent="0,28" />
+    <Function FunctionName="[ntdll.dll]" InclSamples="23" ExclSamples="23" InclSamplesPercent="0,25" ExclSamplesPercent="0,25" />
+    <Function FunctionName="System.Console.ReadKey" InclSamples="19" ExclSamples="18" InclSamplesPercent="0,20" ExclSamplesPercent="0,19" />
+    <Function FunctionName="System.IO.StreamReader.get_EndOfStream" InclSamples="16" ExclSamples="16" InclSamplesPercent="0,17" ExclSamplesPercent="0,17" />
+    <Function FunctionName="System.Collections.Generic.List`1[System.__Canon].Add" InclSamples="15" ExclSamples="15" InclSamplesPercent="0,16" ExclSamplesPercent="0,16" />
+    <Function FunctionName="System.Collections.Generic.List`1[System.__Canon].Remove" InclSamples="19" ExclSamples="14" InclSamplesPercent="0,20" ExclSamplesPercent="0,15" />
+    <Function FunctionName="System.Number.ParseInt32" InclSamples="16" ExclSamples="13" InclSamplesPercent="0,17" ExclSamplesPercent="0,14" />
+    <Function FunctionName="System.IO.TextReader.Dispose" InclSamples="12" ExclSamples="12" InclSamplesPercent="0,13" ExclSamplesPercent="0,13" />
+    <Function FunctionName="BattleSity.Collision.HaveShotCollision" InclSamples="480" ExclSamples="11" InclSamplesPercent="5,13" ExclSamplesPercent="0,12" />
+    <Function FunctionName="BattleSity.ConsoleRender.Misale" InclSamples="3 929" ExclSamples="10" InclSamplesPercent="41,99" ExclSamplesPercent="0,11" />
+    <Function FunctionName="System.Collections.Generic.List`1[System.__Canon].GetEnumerator" InclSamples="10" ExclSamples="10" InclSamplesPercent="0,11" ExclSamplesPercent="0,11" />
+    <Function FunctionName="BattleSity.Collision.DoesItCollideFire" InclSamples="14" ExclSamples="9" InclSamplesPercent="0,15" ExclSamplesPercent="0,10" />
+    <Function FunctionName="BattleSity.ConsoleRender.DeleteMisale" InclSamples="2 278" ExclSamples="9" InclSamplesPercent="24,35" ExclSamplesPercent="0,10" />
+    <Function FunctionName="System.String.Format" InclSamples="8" ExclSamples="8" InclSamplesPercent="0,09" ExclSamplesPercent="0,09" />
+    <Function FunctionName="BattleSity.Collision.IsMisaleHitTank" InclSamples="11" ExclSamples="7" InclSamplesPercent="0,12" ExclSamplesPercent="0,07" />
+    <Function FunctionName="BattleSity.ConsoleRender.DeleteTank" InclSamples="956" ExclSamples="7" InclSamplesPercent="10,22" ExclSamplesPercent="0,07" />
+    <Function FunctionName="BattleSity.Tank.get_CurrentCol" InclSamples="7" ExclSamples="7" InclSamplesPercent="0,07" ExclSamplesPercent="0,07" />
+    <Function FunctionName="System.Collections.Generic.List`1+Enumerator[System.__Canon].MoveNext" InclSamples="8" ExclSamples="7" InclSamplesPercent="0,09" ExclSamplesPercent="0,07" />
+    <Function FunctionName="System.Text.StringBuilderCache.GetStringAndRelease" InclSamples="7" ExclSamples="7" InclSamplesPercent="0,07" ExclSamplesPercent="0,07" />
+    <Function FunctionName="BattleSity.ConsoleRender.DrowTankDown" InclSamples="328" ExclSamples="6" InclSamplesPercent="3,51" ExclSamplesPercent="0,06" />
+    <Function FunctionName="BattleSity.ConsoleRender.DrowTankLeft" InclSamples="331" ExclSamples="6" InclSamplesPercent="3,54" ExclSamplesPercent="0,06" />
+    <Function FunctionName="System.Collections.Generic.List`1+Enumerator[System.__Canon].get_Current" InclSamples="6" ExclSamples="6" InclSamplesPercent="0,06" ExclSamplesPercent="0,06" />
+    <Function FunctionName="System.String.CtorCharCount" InclSamples="6" ExclSamples="6" InclSamplesPercent="0,06" ExclSamplesPercent="0,06" />
+    <Function FunctionName="BattleSity.Collision.DoesItCollideTank" InclSamples="5" ExclSamples="5" InclSamplesPercent="0,05" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.ConsoleRender.DrowTankRight" InclSamples="287" ExclSamples="5" InclSamplesPercent="3,07" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.Data.GetWindowHeight" InclSamples="5" ExclSamples="5" InclSamplesPercent="0,05" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.Element.get_Row" InclSamples="5" ExclSamples="5" InclSamplesPercent="0,05" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.GameEngine.MoveEnemyMisales" InclSamples="3 011" ExclSamples="5" InclSamplesPercent="32,18" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.GameEngine.MovePlayesMisales" InclSamples="1 903" ExclSamples="5" InclSamplesPercent="20,34" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.NewPosition..ctor" InclSamples="18" ExclSamples="5" InclSamplesPercent="0,19" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.NewPosition.get_Row" InclSamples="5" ExclSamples="5" InclSamplesPercent="0,05" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.Tank.get_Dimention" InclSamples="5" ExclSamples="5" InclSamplesPercent="0,05" ExclSamplesPercent="0,05" />
+    <Function FunctionName="BattleSity.ConsoleRender.DrowTankUp" InclSamples="208" ExclSamples="4" InclSamplesPercent="2,22" ExclSamplesPercent="0,04" />
+    <Function FunctionName="BattleSity.Fire.get_Symbol" InclSamples="4" ExclSamples="4" InclSamplesPercent="0,04" ExclSamplesPercent="0,04" />
+    <Function FunctionName="BattleSity.NewPosition.ChangeCordinate" InclSamples="8" ExclSamples="4" InclSamplesPercent="0,09" ExclSamplesPercent="0,04" />
+    <Function FunctionName="BattleSity.NewPosition.set_Column" InclSamples="4" ExclSamples="4" InclSamplesPercent="0,04" ExclSamplesPercent="0,04" />
+    <Function FunctionName="System.Collections.Generic.List`1[System.__Canon]..ctor" InclSamples="4" ExclSamples="4" InclSamplesPercent="0,04" ExclSamplesPercent="0,04" />
+    <Function FunctionName="System.Collections.Generic.List`1[System.__Canon].get_Item" InclSamples="4" ExclSamples="4" InclSamplesPercent="0,04" ExclSamplesPercent="0,04" />
+    <Function FunctionName="System.Console.Write" InclSamples="4" ExclSamples="4" InclSamplesPercent="0,04" ExclSamplesPercent="0,04" />
+    <Function FunctionName="System.Random.Next" InclSamples="4" ExclSamples="4" InclSamplesPercent="0,04" ExclSamplesPercent="0,04" />
+    <Function FunctionName="BattleSity.Fire.get_Color" InclSamples="3" ExclSamples="3" InclSamplesPercent="0,03" ExclSamplesPercent="0,03" />
+    <Function FunctionName="BattleSity.Fire.get_OldCol" InclSamples="3" ExclSamples="3" InclSamplesPercent="0,03" ExclSamplesPercent="0,03" />
+    <Function FunctionName="BattleSity.GameEngine.ShowInformation" InclSamples="879" ExclSamples="3" InclSamplesPercent="9,39" ExclSamplesPercent="0,03" />
+    <Function FunctionName="BattleSity.GameEngine.Start" InclSamples="8 196" ExclSamples="3" InclSamplesPercent="87,59" ExclSamplesPercent="0,03" />
+    <Function FunctionName="BattleSity.Tank.get_Lives" InclSamples="3" ExclSamples="3" InclSamplesPercent="0,03" ExclSamplesPercent="0,03" />
+    <Function FunctionName="System.IO.File.OpenRead" InclSamples="5" ExclSamples="3" InclSamplesPercent="0,05" ExclSamplesPercent="0,03" />
+    <Function FunctionName="BattleSity.ConsoleRender.MenuItem" InclSamples="810" ExclSamples="2" InclSamplesPercent="8,66" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.Fire.get_CurrentCol" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.Fire.get_Direction" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.Fire.set_OldRow" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.GameEngine.EnemyPlay" InclSamples="1 940" ExclSamples="2" InclSamplesPercent="20,73" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.GameEngine.ReadDirectionAndFire" InclSamples="56" ExclSamples="2" InclSamplesPercent="0,60" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.Menu.ChangeChoise" InclSamples="9 348" ExclSamples="2" InclSamplesPercent="99,90" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.NewPosition.set_Row" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="BattleSity.Tank.get_CurrentRow" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="System.Collections.Generic.List`1[System.__Canon].get_Count" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="System.Runtime.Serialization.Formatters.Binary.BinaryFormatter..ctor" InclSamples="2" ExclSamples="2" InclSamplesPercent="0,02" ExclSamplesPercent="0,02" />
+    <Function FunctionName="[snxhk64.dll]" InclSamples="7" ExclSamples="1" InclSamplesPercent="0,07" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.ConsoleRender.Tank" InclSamples="2 117" ExclSamples="1" InclSamplesPercent="22,62" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Data.GetElementDimention" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Data.GetWindowWidth" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Fire.get_IsPlayerFire" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Fire.get_OldRow" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Fire.Move" InclSamples="6" ExclSamples="1" InclSamplesPercent="0,06" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Fire.set_Color" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Fire.set_CurrentCol" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.NewPosition.get_Column" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Tank.get_Color" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Tank.get_Direction" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Tank.get_IsPlayr" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Tank.get_OldRow" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.Tank.set_CurrentRow" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="System.Collections.Generic.List`1+Enumerator[System.__Canon].Dispose" InclSamples="1" ExclSamples="1" InclSamplesPercent="0,01" ExclSamplesPercent="0,01" />
+    <Function FunctionName="System.Random..ctor" InclSamples="2" ExclSamples="1" InclSamplesPercent="0,02" ExclSamplesPercent="0,01" />
+    <Function FunctionName="BattleSity.BattleSity.Main" InclSamples="9 356" ExclSamples="0" InclSamplesPercent="99,99" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.ConsoleRender.DrawElement" InclSamples="10" ExclSamples="0" InclSamplesPercent="0,11" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.ConsoleRender.DrowBraket" InclSamples="7" ExclSamples="0" InclSamplesPercent="0,07" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.ConsoleRender.FillConsoleBackgroundColor" InclSamples="5" ExclSamples="0" InclSamplesPercent="0,05" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.ConsoleRender.Level" InclSamples="12" ExclSamples="0" InclSamplesPercent="0,13" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Data.GetLevel" InclSamples="936" ExclSamples="0" InclSamplesPercent="10,00" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Data.GetNumberOfLevels" InclSamples="119" ExclSamples="0" InclSamplesPercent="1,27" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Data.ReadSetings" InclSamples="103" ExclSamples="0" InclSamplesPercent="1,10" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.EnemyAI.Move" InclSamples="1" ExclSamples="0" InclSamplesPercent="0,01" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.EnemyAI.Shoot" InclSamples="2" ExclSamples="0" InclSamplesPercent="0,02" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Fire..ctor" InclSamples="14" ExclSamples="0" InclSamplesPercent="0,15" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.GameEngine..ctor" InclSamples="948" ExclSamples="0" InclSamplesPercent="10,13" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.GameEngine.CreateEnemy" InclSamples="19" ExclSamples="0" InclSamplesPercent="0,20" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.GameEngine.FillStartEnemyPositions" InclSamples="3" ExclSamples="0" InclSamplesPercent="0,03" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.GameEngine.PlayerMove" InclSamples="329" ExclSamples="0" InclSamplesPercent="3,52" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.EnterPressed" InclSamples="9 164" ExclSamples="0" InclSamplesPercent="97,94" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.Load" InclSamples="9 356" ExclSamples="0" InclSamplesPercent="99,99" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.ShowChoise" InclSamples="1" ExclSamples="0" InclSamplesPercent="0,01" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.ShowErrorMessage" InclSamples="2" ExclSamples="0" InclSamplesPercent="0,02" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.ShowPlayrResults" InclSamples="6" ExclSamples="0" InclSamplesPercent="0,06" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.ShowStartMenu" InclSamples="6" ExclSamples="0" InclSamplesPercent="0,06" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Menu.StartGame" InclSamples="9 161" ExclSamples="0" InclSamplesPercent="97,91" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.NewPosition..ctor" InclSamples="4" ExclSamples="0" InclSamplesPercent="0,04" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Tank..ctor" InclSamples="12" ExclSamples="0" InclSamplesPercent="0,13" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Tank.MakeStartPosition" InclSamples="3" ExclSamples="0" InclSamplesPercent="0,03" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Tank.Move" InclSamples="2" ExclSamples="0" InclSamplesPercent="0,02" ExclSamplesPercent="0,00" />
+    <Function FunctionName="BattleSity.Tank.SetLivesAndColor" InclSamples="4" ExclSamples="0" InclSamplesPercent="0,04" ExclSamplesPercent="0,00" />
+  </FunctionSummary>
+</PerformanceReport>
