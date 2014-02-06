@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Registration form</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <style>
+        tbody tr td:first-child {
+            font-weight: bold;
+            text-align: right;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        tfoot {
+            background-color: aliceblue;
+            text-align: center;
+        }
+
+        td {
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <table border="1">
+            <tfoot>
+                <tr>
+                    <td colspan="4">
+                        <input type="submit" value="Submit" />
+                        <input type="reset" value="Clear This Form" />
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td><label for="lastname">Last Name</label></td>
+                    <td colspan="3"><input type="text" id="lastname" value="Nakov" /></td>
+                </tr>
+                <tr>
+                    <td><label for="firstname">First Name</label></td>
+                    <td colspan="3"><input type="text" id="firstname" value="Svetlin" /></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td colspan="3"><textarea id="address" rows="4">17 Hristo Botev Str. floor 3, apt. 12</textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input type="text" id="city" value="Kaspichan" /></td>
+                    <td><label for="state">State</label></td>
+                    <td><input type="text" id="state" value="" /></td>
+                </tr>
+                <tr>
+                    <td><label for="zipcode">Zip/Postal Code</label></td>
+                    <td colspan="3"><input type="text" id="zipcode" value="9325" /></td>
+                </tr>
+                <tr>
+                    <td><label for="country">Country</label></td>
+                    <td colspan="3"><select id="country"><option selected>Bulgaria</option></select></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone (county code,<br /> area code, number)</label></td>
+                    <td colspan="3">(+<input type="text" id="phone" value="359" size="5" />)<input type="text" value="88" size="4" />-<input type="text" value="8334343" size="15" /></td>
+                </tr>
+                <tr>
+                    <td><label for="email">E-mail</label></td>
+                    <td colspan="3"><input type="email" id="email" value="nakov@kaspichan.org" /></td>
+                </tr>
+                <tr>
+                    <td><label for="birth">Birth date</label></td>
+                    <td colspan="3">Month<input type="text" id="birth" value="06" size="1" /> Day<input type="text" value="14" size="1" /> Year(4 digit)<input type="text" value="1980" size="5" /></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td colspan="3"><select id="gender"><option selected>Male</option></select></td>
+                </tr>
+                <tr>
+                    <td><label for="start">Starting date</label></td>
+                    <td colspan="3">
+                        <input type="radio" name="start" id="start" value="sprint">Spring 2006
+                        <input type="radio" name="start" value="summer" />Summer 2006
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="comments">Comments/Questions</label></td>
+                    <td colspan="3"><textarea id="comments" rows="6">Please send me mor information about the lodging</textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿<Window x:Class="FilesShelf.App.ImportFilesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Import books to library" Height="400" Width="550" MinHeight="300" MinWidth="500">    
+    <Grid>
+        <!--LAYOUT DEFINITION-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" x:Name="TabsContainer_Row"/>
+            <RowDefinition Height="40" x:Name="ButtonsContainer_Row"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="ListContainer_Column" Width="*"/>
+            <ColumnDefinition x:Name="FilePreview_Column" Width="150"/>
+        </Grid.ColumnDefinitions>
+        <!--EXPLORER OPTIONS TABS-->
+        <TabControl SelectionChanged="ExploreOptionTabs_SelectionChanged" Margin="5" x:Name="ExploreOptions_Tabs" Grid.Row="0">
+            <TabItem Header="Import from a folder" IsSelected="True">
+                <Grid Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" x:Name="FolderExplorerTextBox_Column"/>
+                        <ColumnDefinition Width="100" x:Name="FolderExplorerButton_Column"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <!--files explorer-->
+                    <TextBox Grid.Row="0" Grid.Column="0" x:Name="FolderName_Textbox" Margin="0 5" TextChanged="FolderName_Textbox_TextChanged"/>
+                    <Button x:Name="BrowseFolder_Button" Click="BrowseFolder_Button_Click" Grid.Row="0" Grid.Column="1" Margin="5 5 0 5">
+                        Browse
+                    </Button>
+                    <!--files explorer list-->
+                    <ListBox SelectionMode="Extended" x:Name="FilesInFolder_List" Grid.Row="1" Grid.ColumnSpan="2" SelectionChanged="FilesList_SelectionChanged"></ListBox>
+                    <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
+                        <Button x:Name="FilesInFolderListSelectAll_Button" Click="SelectAll_Button_Click" Margin="0 5 5 5" Padding="5 0">Select all</Button>
+                        <Button x:Name="FilesInFolderListSelectNone_Button" Click="SelectNone_Button_Click" Margin="0 5 5 5" Padding="5 0">Select none</Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem TabIndex="2" Header="Recently opened files">
+                <Grid Margin="5" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <!--files explorer list-->
+                    <ListBox Loaded="RecentFilesList_Loaded"  SelectionMode="Extended" x:Name="RecentFiles_List" SelectionChanged="FilesList_SelectionChanged" Grid.Row="0"></ListBox>
+                    <StackPanel Orientation="Horizontal" Grid.Row="1">
+                        <Button Click="SelectAll_Button_Click" x:Name="RecentFilesListSelectAll_Button" Margin="0 5 5 5" Padding="5 0">Select all</Button>
+                        <Button x:Name="RecentFilesListSelectNone_Button" Click="SelectNone_Button_Click" Margin="0 5 5 5" Padding="5 0">Select none</Button>
+                    </StackPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <!--FILES PREVIEW BOX-->
+        <Rectangle Grid.Column="1" Grid.Row="0" Stroke="#FFACACAC" Margin="4" >
+        </Rectangle>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="6" Grid.Column="1" Grid.Row="0">
+        <StackPanel Orientation="Vertical" x:Name="SelectedFileInfo_Stack" Grid.Column="1" Grid.Row="0">
+            <Image Height="100" Stretch="UniformToFill"  Width="100" Margin="10 10 0 0" x:Name="FileIconPreview_Image" Source="Images/defaultBookBack.jpg"/>
+            <TextBlock Margin="10" x:Name="FileParameters_TextBlock" TextWrapping="Wrap">
+                No file selected.
+            </TextBlock>            
+        </StackPanel>
+        </ScrollViewer>
+        <!--BUTTONS STACK-->
+        <StackPanel Grid.ColumnSpan="2" HorizontalAlignment="Right" Grid.Row="1" Orientation="Horizontal" x:Name="WindowButtons_Stack">
+            <Button Click="ImportFilesWithLibrarian_Button_Click" x:Name="ImportFilesWithLibrarian_Button" Margin="5" Padding="5">Import with Librarian</Button>
+            <Button x:Name="ImportFiles_Button" Click="ImportFiles_Button_Click" Margin="5" Padding="5">Import selected files</Button>
+            <Button x:Name="Cancel_Button" Margin="5" Padding="5" Click="Cancel_Button_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

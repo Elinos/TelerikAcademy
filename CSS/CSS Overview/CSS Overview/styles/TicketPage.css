@@ -1,0 +1,44 @@
+﻿body
+{
+    background-color: #595959;
+    font-family: Arial;
+}
+a
+{
+    color: #f3f6ac;
+    text-decoration: none;
+}
+thead
+{
+    font-size: 20px;
+    color: #acb1aa;
+}
+span.circle /*The circle in the first row*/
+{
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    background-color: #71b47a;
+}
+span.alert
+{
+    color: red;
+}
+td
+{
+    padding: 5px;
+    color: #ccc;
+}
+td.info, td.details
+{
+    font-size: 14px;
+}
+td.info
+{
+    font-style: italic;
+    color: #fff;
+}
+td.status
+{
+    color: orange;
+}

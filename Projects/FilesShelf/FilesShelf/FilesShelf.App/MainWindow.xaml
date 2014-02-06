@@ -1,0 +1,283 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ms="http://namespaces.mindscape.co.nz/wpf" x:Class="FilesShelf.App.MainWindow"
+        xmlns:avalonDock="http://avalondock.codeplex.com"
+        xmlns:FilesShelfControls="clr-namespace:FilesShelf.App.Controls"
+        xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=AvalonDock"
+        Title="Files shelf" Height="600" Width="800" Background="Gainsboro"  MinHeight="480" MinWidth="640" Closing="Window_Closing">
+    <Grid>
+        <!--BASIC GRID LAYOUT-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" x:Name="Menu_RowDefinition"/>
+            <RowDefinition Height="100*" x:Name="UI_RowDefinition"/>
+            <RowDefinition Height="22" x:Name="StatusBar_RowDefinition"/>
+        </Grid.RowDefinitions>
+        <!--MENU-->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Menu
+		DockPanel.Dock="Top" HorizontalAlignment="Stretch">
+                <!--file menu-->
+                <MenuItem Header=" _File">
+                    <MenuItem Click="Import_Button_Click" Header="_Import books to library">
+                        <MenuItem.Icon>
+                            <Image Source="Images/import2.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="_Export to...">
+                        <MenuItem.Icon>
+                            <Image Source="Images/export2.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Click="Librarian_Button_Click" Header="_Open Librarian">
+                        <MenuItem.Icon>
+                            <Image Source="Images/librarianIcon.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Exit" Click="CloseApp_Button_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Images/mexit.bmp"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <!--edit menu-->
+                <!-- further work on this-->
+                <MenuItem x:Name="Edit_Menu" Header="_Edit">
+                    <MenuItem x:Name="OpenSelectedBook_MenuItem" Click="OpenSelectedBook_Click" Header="_Open selected book">
+                        <!--Command="New"-->
+                        <MenuItem.Icon>
+                            <Image Source="Images/mnew.bmp"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem x:Name="DeleteSelectedBook_MenuItem" Header="_Delete selected book" Click="DeleteSelectedBook_Click">
+                        <!--Command="Cut"-->
+                        <MenuItem.Icon>
+                            <Image Source="Images/delete2.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Search" Command="Search">
+                        <MenuItem.Icon>
+                            <Image Source="Images/msearch.bmp"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <!--view menu-->
+                <MenuItem Header="_View">
+                    <MenuItem Header="_List View">
+                        <MenuItem.Icon>
+                            <Image Source="Images/list_view2.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Table View">
+                        <MenuItem.Icon>
+                            <Image Source="Images/table_view2.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Thumbnail View">
+                        <MenuItem.Icon>
+                            <Image Source="Images/thumbnails_view2.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Wall View"/>
+                    <Separator/>
+                    <MenuItem Header="Filters panel" IsCheckable="True" IsChecked="{Binding IsVisible, ElementName=Filters, Mode=TwoWay}"/>
+                    <MenuItem Header="Book description panel" IsCheckable="True" IsChecked="{Binding IsVisible, ElementName=BookDesc, Mode=TwoWay}"/>
+                    <!--<MenuItem Header="Desc space panel" IsCheckable="True" IsChecked="{Binding IsVisible, ElementName=DeskSpace, Mode=TwoWay}"/>-->
+                </MenuItem>
+                <!--help menu-->
+                <MenuItem Header="_Help">
+                    <MenuItem Header="_About" Click="AboutBoxLauncher_Button_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Images/mabout.bmp"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <!--TOOLBAR TRAY-->
+            <ToolBarTray Background="WhiteSmoke">
+                <!--file toolbar-->
+                <ToolBar Band="1" BandIndex="1">
+                    <Button x:Name="Import_Button" Click="Import_Button_Click">
+                        <Image Source="Images/import1.png"/>
+                    </Button>
+                    <!--<Button Click="Button_Click_1">-->
+                    <Button>
+                        <Image Source="Images/export1.png"/>
+                    </Button>
+                    <Button x:Name="Librarian_Button" Click="Librarian_Button_Click">
+                        <Image Source="Images/librarianIcon.png" />
+                    </Button>
+                    <Button x:Name="CloseApp_Button" Click="CloseApp_Button_Click">
+                        <Image Source="Images/exit.bmp" />
+                    </Button>
+                </ToolBar>
+                <!--edit toolbar-->
+                <ToolBar Band="1" BandIndex="2">
+                    <Button x:Name="OpenBook_Button" Click="OpenSelectedBook_Click" IsEnabled="{Binding IsEnabled, ElementName=OpenSelectedBook_MenuItem}">
+                        <Image Source="Images/new.bmp"/>
+                    </Button>
+                    <Button x:Name="DeleteBook_Button" Click="DeleteSelectedBook_Click" IsEnabled="{Binding IsEnabled, ElementName=DeleteSelectedBook_MenuItem}">
+                        <Image Source="Images/delete1.png"/>
+                    </Button>
+                    <Button>
+                        <Image Source="Images/Search2.ico" />
+                    </Button>
+                </ToolBar>
+                <!--view toolbar-->
+
+                <ToolBar Band="1" BandIndex="3">
+                    <Button>
+                        <Image Source="Images/list_view1.png"/>
+                    </Button>
+                    <Button>
+                        <Image Source="Images/table_view1.png"/>
+                    </Button>
+                    <Button>
+                        <Image Source="Images/thumbnails_view1.png"/>
+                    </Button>
+                </ToolBar>
+
+                <!--help toolbar-->
+                <ToolBar Band="1" BandIndex="4">
+                    <Button x:Name="AboutBoxLauncher_Button" Click="AboutBoxLauncher_Button_Click">
+                        <Image Source="Images/about.bmp" />
+                    </Button>
+                </ToolBar>
+            </ToolBarTray>
+            <!--search-->
+            <Grid Background="WhiteSmoke">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="120"/>
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="SearchTerm_TextCombo" IsTextSearchEnabled="True" IsEditable="True" Margin="5"></ComboBox>
+                <Button x:Name="ExecuteSearch_Button" Click="ExecuteSearch_Click" Margin="5" Grid.Column="1">Search</Button>
+            </Grid>
+        </StackPanel>
+        <!--PANELS-->
+        <avalonDock:DockingManager Margin="3" x:Name="dockingManager" Grid.Row="1">
+            <avalonDock:LayoutRoot>
+                <avalonDock:LayoutPanel Orientation="Vertical">
+                    <!--Filters panel-->
+                    <avalonDock:LayoutPanel Orientation="Horizontal">
+                        <avalonDock:LayoutAnchorablePane x:Name="BookFilters_Pane" DockWidth="170">
+                            <avalonDock:LayoutAnchorable x:Name="Filters" Title="Filters">
+                                <!--FILTER CONTROL-->
+                                <Grid x:Name="Filter" Grid.Column="0" Grid.Row="1" VerticalAlignment="Stretch">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition x:Name="Filter_Result_Row"/>
+                                        <RowDefinition x:Name="Filter_Row"/>
+                                    </Grid.RowDefinitions>
+                                    <!--<StackPanel x:Name="FilterGroupName_Stack">
+                                        <Label x:Name="FilterTypeLabel" Margin="0 0 0 10" Background="Gray">
+                                            <Label.Effect>
+                                                <DropShadowEffect/>
+                                            </Label.Effect> Groups:
+                                        </Label>
+                                    </StackPanel>-->
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <StackPanel x:Name="FilterGroups_Stack" VerticalAlignment="Stretch" Margin="5 0 5 5">
+                                            <!--<Label x:Name="ResultGroups_Label"  Background="LightGray">-->
+                                            <Label x:Name="FilterTypeLabel" Margin="0 0 0 10" Background="Gray">
+                                                <Label.Effect>
+                                                    <DropShadowEffect/>
+                                                </Label.Effect> Groups:
+                                            </Label>
+                                            <!--Filter result groups list-->
+                                            <ListBox BorderThickness="0" SelectionChanged="FilterResultsGroup_SelectionChanged" x:Name="FilterResultGroups_List" Margin="0 0 0 0">
+                                            </ListBox>
+                                        </StackPanel>
+                                    </ScrollViewer>
+                                    <Grid Grid.Column="0" Grid.Row="1">
+                                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                            <StackPanel Grid.Row="1" VerticalAlignment="Stretch" Margin="5">
+                                                <Label x:Name="FilterType_Label" Margin="0 0 0 10" Background="Gray">
+                                                    <Label.Effect>
+                                                        <DropShadowEffect/>
+                                                    </Label.Effect> Group by:
+                                                </Label>
+                                                <!--group search results-->
+                                                <!--<StackPanel Orientation="Vertical" Margin="5 10">
+                                                    <RadioButton x:Name="GroupByStartingLetter_Radio" Click="GroupByConditionChange_Click" Margin="0 0 0 5" GroupName="GroupingOptions" IsChecked="True">By title starting letter</RadioButton>
+                                                    <RadioButton x:Name="GroupByAuthors_Radio" Click="GroupByConditionChange_Click"  Margin="0 0 0 5" GroupName="GroupingOptions">By author</RadioButton>
+                                                    <RadioButton x:Name="GroupByRatings_Radio" Click="GroupByConditionChange_Click" Margin="0 0 0 5" GroupName="GroupingOptions">By Rating</RadioButton>
+                                                </StackPanel>-->
+                                                <Button x:Name="AuthorsGroupBy_Button" Margin="2" Height="30" Click="AuthorsGroupByButton_Click">
+                                                    <!--Click="Button_Click_2" GotFocus="Authors_GotFocus"-->
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/authors2.jpg"/>
+                                                        <TextBlock Margin="20 2 0 2">Authors</TextBlock>
+                                                    </StackPanel>
+                                                </Button>
+                                                <Button x:Name="BooksGroupBy_Button" Margin="2" Height="30" Click="Books_Click" GotFocus="Books_GotFocus">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/books.jpg"/>
+                                                        <TextBlock Margin="20 2 0 2">Books</TextBlock>
+                                                    </StackPanel>
+                                                </Button>
+                                                <Button x:Name="GenresGroupBy_Button" Margin="2" Height="30" Click="Genres_Click" GotFocus="Genres_GotFocus">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/genres1.jpg"/>
+                                                        <TextBlock Margin="20 2 0 2">Genres</TextBlock>
+                                                    </StackPanel>
+                                                </Button>
+                                                <Button x:Name="Movies" Margin="2" Height="30" Click="Movies_Click">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/movies1.jpg"/>
+                                                        <TextBlock Margin="20 2 0 2">Movies</TextBlock>
+                                                    </StackPanel>
+                                                </Button>
+                                                <Button x:Name="Songs" Margin="2" Height="30" Click="Songs_Click">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/music1.jpg"/>
+                                                        <TextBlock Margin="20 2 0 2">Songs</TextBlock>
+                                                    </StackPanel>
+                                                </Button>                                               
+                                                <!--<Button x:Name="Titles" Margin="2" Height="30">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/titles1.jpg"/>
+                                                        <TextBlock Margin="20 2 0 2">Titles</TextBlock>
+                                                    </StackPanel>
+                                                </Button>-->
+                                                <Button x:Name="Rating" Margin="2" Height="30" Click="Rating_Click">
+                                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                                                        <Image Source="Images/FilterIcons/rating.bmp"/>
+                                                        <TextBlock Margin="20 2 0 2">Rating</TextBlock>
+                                                    </StackPanel>
+                                                </Button>
+                                            </StackPanel>
+                                        </ScrollViewer >
+                                    </Grid>
+                                    <GridSplitter  Grid.Row="1" Height="3" VerticalAlignment="Top" Background="Gray" HorizontalAlignment="Stretch"></GridSplitter>
+                                </Grid>
+                            </avalonDock:LayoutAnchorable>
+                        </avalonDock:LayoutAnchorablePane>
+                        <!--book shelf pane -->
+                        <avalonDock:LayoutDocumentPane x:Name="BookShelf_Pane" DockWidth="200*">
+                        </avalonDock:LayoutDocumentPane>
+                        <!--Book description pane-->
+                        <avalonDock:LayoutAnchorablePane x:Name="BookDesc_Pane" DockWidth="270" DockMinWidth="270">
+                            <avalonDock:LayoutAnchorable x:Name="BookDesc" Title="Book description">
+                                <FilesShelfControls:BookDescription x:Name="booksDescriptionPanel" HorizontalAlignment="Stretch"></FilesShelfControls:BookDescription>
+                            </avalonDock:LayoutAnchorable>
+                        </avalonDock:LayoutAnchorablePane>
+                    </avalonDock:LayoutPanel>
+                    <!--Desk space panel-->
+                    <!--
+                    <avalonDock:LayoutAnchorablePane x:Name="DeskSpace_Pane" DockHeight="150">
+                        <avalonDock:LayoutAnchorable x:Name="DeskSpace" Title="Desk space">
+                            <FilesShelfControls:DescSpaceRow/>
+                        </avalonDock:LayoutAnchorable>
+                    </avalonDock:LayoutAnchorablePane>
+                    -->
+                </avalonDock:LayoutPanel>
+            </avalonDock:LayoutRoot>
+        </avalonDock:DockingManager>
+        <!--STATUS BAR-->
+        <StatusBar Grid.Row="2" x:Name="App_StatusBar">
+            <StatusBarItem x:Name="WorkMonitorMessage_BarItem"></StatusBarItem>
+            <StatusBarItem x:Name="WorkMonitor_BarItem"></StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

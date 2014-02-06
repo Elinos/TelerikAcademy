@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="FilesShelf.App.Controls.BookDescription"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="900" d:DesignWidth="400"
+             xmlns:FilesShelfControls="clr-namespace:FilesShelf.App.Controls"
+             >
+    <Grid Width="auto" Height="auto">
+        <Grid.Background>
+            <ImageBrush ImageSource="/FilesShelf.App;component/Images/defaultBookBack.jpg" Stretch="Uniform"/>
+        </Grid.Background>
+        <ScrollViewer x:Name="BookDescription_Container"  VerticalScrollBarVisibility="Auto" Background="White">
+            <StackPanel Orientation="Vertical">
+                <!--OPEN TO READ BUTTON-->
+                <Button HorizontalAlignment="Left" Margin="5" Click="OpenFileButton_Click" Padding="5">Open to read</Button>
+                <!--BOOK COVER PREVIEW-->
+                <Image x:Name="BookCoverPreview_Image" HorizontalAlignment="Left" Margin="5" Width="250" Height="312" Source="/FilesShelf.App;component/Images/testBookCover.jpg">
+                </Image>
+                <!--BOOK TITLE AND AUTHOR-->
+                <Label FontSize="20" Foreground="DarkRed">Title:</Label>
+                <FilesShelfControls:EditableText LostFocus="BookTitle_Editable_LostFocus" TextSize="26" x:Name="BookTitle_Editable"/>
+                <Label FontSize="20" Foreground="DarkRed">Authors:</Label>
+                <FilesShelfControls:EditableText LostFocus="BookAuthors_Editable_LostFocus" TextSize="18" x:Name="BookAuthors_Editable"/>
+                <!--BOOK DESCRIPTION-->
+                <Label FontSize="20" Foreground="DarkRed">Description:</Label>
+                <FilesShelfControls:EditableText LostFocus="BookDescription_Editable_LostFocus" TextSize="15" x:Name="BookDescription_Editable"/>
+                <!--BOOK GENRES-->
+                <Label FontSize="20" Foreground="DarkRed">Genres:</Label>
+                <FilesShelfControls:EditableText LostFocus="BookGenres_Editable_LostFocus" TextSize="15" x:Name="BookGenres_Editable"/>
+                <!--BOOK RATINGS-->
+                <Label FontSize="20" Foreground="DarkRed">LibraryThing rating:</Label>
+                <FilesShelfControls:StarRate MaxValue="10" x:Name="BookLibraryThing_StarRate" HorizontalAlignment="Left" Margin="5 0 0 0"></FilesShelfControls:StarRate>
+                <Label FontSize="20" Foreground="DarkRed">Your rating:</Label>
+                <FilesShelfControls:StarRate MaxValue="5" IsEditable="True" HorizontalAlignment="Left" x:Name="BookUser_StarRate" MouseDown="BookUserStarRate_MouseDown" Margin="5 0 0 0"></FilesShelfControls:StarRate>
+                <Label FontSize="20" Foreground="DarkRed">Publisher:</Label>
+                <FilesShelfControls:EditableText LostFocus="BookPublisher_Editable_LostFocus" x:Name="BookPublisher_Editable" TextSize="14"/>
+                <!--<Label FontSize="20" Foreground="DarkRed">Publish date:</Label>
+                <FilesShelfControls:EditableText LostFocus="BookPublishDate_Editable_LostFocus" x:Name="BookPublishDate_Editable" TextSize="14"/>-->
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FilesShelf.Models.Book">
+    <Position X="7" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAgAAECAAIAAAAAQBAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.BookLibraryManager">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAIQAAAAACAAAAABAA=</HashCode>
+      <FileName>BookLibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.BooksLibrary">
+    <Position X="0.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAQgAIAAAAAAAAAEAAAAAAAAAEABAEAAA=</HashCode>
+      <FileName>BooksLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Genre">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Genre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.LibraryManager">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAAAAAAAAAAAAAACAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>LibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Media">
+    <Position X="9" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAgAEAAAAIACAAAAAAAAAAAABAEACAAAAA=</HashCode>
+      <FileName>Media.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FilesShelf.Models.MediaLibrary">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAgAAAAAAAAAAAACEAAAQAAABAgAIAAAAA=</HashCode>
+      <FileName>MediaLibrary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FilesShelf.Models.Movie">
+    <Position X="9" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAABAAgAAECAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Movie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.MovieLibraryManager">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MovieLibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.MoviesLibrary">
+    <Position X="2.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAAAAAAAAQAAAAEAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>MoviesLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.MusicLibrary">
+    <Position X="5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>MusicLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Person">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.QueryManager">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABQAAAAAAAAAACAgAAAgAAAAEAAAAAAAAA=</HashCode>
+      <FileName>QueryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.QueryRequest">
+    <Position X="13.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>QueryRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Renderer" BaseTypeListCollapsed="true">
+    <Position X="15.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAIAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Renderer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FilesShelf.Models.Song">
+    <Position X="11" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Song.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.SongLibraryManager">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>SongLibraryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Task">
+    <Position X="15.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAgAAAAAAACCAAAAAAAAgAAAAAAAACAAA=</HashCode>
+      <FileName>Task.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Database.DbBook">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAACAAAAAAAAAAAEAAAIAAAAAQAAAAAg=</HashCode>
+      <FileName>Database\DbBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Database.DbCommon">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Database\DbCommon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Database.DbTask">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAEAAAEABBAEAAAAAAAAAAAAAAAFAAiAAAAAAAAA=</HashCode>
+      <FileName>Database\DbTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesShelf.Models.Database.FilesShelfDbObject">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Database\FilesShelfDbObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="FilesShelf.Models.IFilterable">
+    <Position X="13.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFilterable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FilesShelf.Models.IRenderable">
+    <Position X="15.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>IRenderable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FilesShelf.Models.IRenderer">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAIAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>IRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FilesShelf.Models.ISortable">
+    <Position X="9.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ISortable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="FilesShelf.Models.BookType">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BookType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FilesShelf.Models.GroupByType">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAA=</HashCode>
+      <FileName>QueryRequest.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FilesShelf.Models.State">
+    <Position X="11.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAABAAQBAAAAA=</HashCode>
+      <FileName>State.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

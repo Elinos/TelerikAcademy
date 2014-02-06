@@ -1,0 +1,18 @@
+﻿<Window x:Class="FilesShelf.App.AskForISBNWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Specify an ISBN number" WindowStyle="ToolWindow" Height="130" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="Label_Row" Height="25"/>
+            <RowDefinition x:Name="Input_Row" Height="30"/>
+            <RowDefinition x:Name="Buttons_Row" Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0">Specify ISBN:</Label>        
+        <TextBox Grid.Row="1" x:Name="ISBN_Textbox" Margin="5"></TextBox>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="2">
+            <Button Click="Confirm_Button_Click" x:Name="Confirm_Button" Margin="5" Padding="5">Confirm</Button>
+            <Button Click="Cancel_Button_Click" x:Name="Cancel_Button" Margin="5" Padding="5">Cancel</Button>
+        </StackPanel>        
+    </Grid>
+</Window>

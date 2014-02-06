@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        tfoot {
+            background-color: lightgray;
+        }
+
+        thead {
+            background-color: lightgray;
+        }
+
+        tfoot span {
+            float: right;
+            padding-top: 4px;
+        }
+
+        tfoot td input {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr><td colspan="6">Drag a column header and drop it here to group by that column</td></tr>
+            <tr>
+                <td>Product id</td>
+                <td>Product name</td>
+                <td>Unit price</td>
+                <td>Quantitty per unit</td>
+                <td>Units in stock</td>
+                <td>Discontinued</td>
+            </tr>
+            <tr>
+                <td><input type="text" name="productID" value="" /></td>
+                <td><input type="text" name="productName" value="" /></td>
+                <td>
+                    <input type="text" name="unitPrice" value="" />
+                    <input type="image" src="images/filter.jpg" alt="sort button" />
+                </td>
+                <td><input type="text" name="Quantity" value="" /></td>
+                <td>
+                    <input type="text" name="Units" value="" />
+                    <input type="image" src="images/filter.jpg" alt="sort button" />
+                </td>
+                <td>
+                    <input type="checkbox" name="discontinued" value="" />
+                    <input type="image" src="images/filter.jpg" alt="sort button" />
+                </td>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                    <input type="image" src="images/first.jpg" name="first" alt="left arrow" />
+                    <input type="image" src="images/prev.jpg" name="prev" alt="left arrow" />
+                    <input type="button" value="1" />
+                    <input type="button" value="2" />
+                    <input type="button" value="3" />
+                    <input type="button" value="4" />
+                    <input type="button" value="5" />
+                    <input type="button" value="6" />
+                    <input type="button" value="7" />
+                    <input type="button" value="8" />
+                    <input type="button" value="9" />
+                    <input type="button" value="10" />
+                    ...
+                    <input type="image" src="images/next.jpg" name="next" alt="right arrow" />
+                    <input type="image" src="images/last.jpg" name="last" alt="right arrow" />
+                    Page size:
+                    <select name="itemsperpage">
+                        <option value="10">10</option>
+                    </select>
+                    <span>335104 items in 33511 pages</span>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled checked /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled checked /></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="item1" disabled /></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="FilesShelf.App.LibrarianWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Librarian" Height="340.611" Width="472.926" Closing="Window_Closing">
+    <Grid>
+        <!--LAYOUT DEFINITION-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition x:Name="Buttons_row" Height="40"/>
+        </Grid.RowDefinitions>
+        <!-- TASKS LIST -->
+        <ScrollViewer Grid.Row="0" Grid.ColumnSpan="2" Margin="5">
+            <StackPanel x:Name="LibrarianTasks_List">            
+            </StackPanel>
+        </ScrollViewer>
+        <!-- BUTTONS AND OVERALL PROGRESS -->
+            <ProgressBar x:Name="Librarian_PorgressBar" Grid.Row="1" Grid.Column="0" Margin="5" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated"/>
+        <Button x:Name="Close_Button"  Grid.Row="2" Grid.Column="1" Padding="5" Margin="5" Width="50" Click="Close_Button_Click">Close</Button>
+    </Grid>
+</Window>
