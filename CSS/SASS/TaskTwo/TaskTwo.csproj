@@ -66,18 +66,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\african-lion-original.jpg" />
-    <Content Include="images\african-lion-thumbnail.jpg" />
-    <Content Include="images\cute-tiger-cub-original.jpg" />
-    <Content Include="images\cute-tiger-cub-thumbnail.jpg" />
-    <Content Include="images\lion-original.jpg" />
-    <Content Include="images\lion-thumbnail.jpg" />
-    <Content Include="images\sumatran-tiger-original.jpg" />
-    <Content Include="images\sumatran-tiger-thumbnail.jpg" />
-    <Content Include="images\the-cougar-original.jpg" />
-    <Content Include="images\the-cougar-thumbnail.jpg" />
-    <Content Include="images\tigers-playing-original.jpg" />
-    <Content Include="images\tigers-playing-thumbnail.jpg" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\1small.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\2small.jpg" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\3small.jpg" />
+    <Content Include="images\4.jpg" />
+    <Content Include="images\4small.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\5small.jpg" />
+    <Content Include="images\6.jpg" />
+    <Content Include="images\6small.jpg" />
     <Content Include="styles\style.css">
       <DependentUpon>style.scss</DependentUpon>
     </Content>
