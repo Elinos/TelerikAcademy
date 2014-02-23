@@ -1,0 +1,32 @@
+body
+{
+	margin:0;
+	width:100%;
+	form {
+		input[type="radio"]	{
+		display:none;
+		}
+		nav {
+			width:74%;
+			margin:auto;
+				ul {
+					li {
+						list-style-type: none;
+						float: left;
+						margin:10px;
+						}
+					}
+			}
+			.bigpicture{
+			width: 860px;
+			margin: 0 auto;
+				.image {
+				display:none;
+				} 
+				input:checked + .image{
+				display:block;
+				margin: auto;
+				}
+			}
+		}
+}

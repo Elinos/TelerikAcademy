@@ -1,0 +1,1 @@
+﻿body{margin:0;width:100%}body form input[type="radio"]{display:none}body form nav{width:74%;margin:auto}body form nav ul li{list-style-type:none;float:left;margin:10px}body form .bigpicture{width:860px;margin:0 auto}body form .bigpicture .image{display:none}body form .bigpicture input:checked+.image{display:block;margin:auto}
