@@ -1,0 +1,224 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+body {
+  width: 960px;
+  font-family: Tahoma, sans-serif;
+}
+
+body #wrapper {
+  font-size: 14px;
+  position: relative;
+  margin-left: 5px;
+}
+
+body #wrapper header div#archive {
+  display: block;
+  text-align: right;
+}
+
+body #wrapper header div#archive ul li {
+  font-size: 10px;
+  display: inline-block;
+}
+
+body #wrapper header div#archive ul li a {
+  text-decoration: none;
+  margin: 5px;
+  color: black;
+}
+
+body #wrapper header div#header {
+  background: #d54900;
+  color: white;
+  display: table;
+  height: 65px;
+  width: 950px;
+}
+
+body #wrapper header div#header h1 {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: right;
+  margin-rigth: 30px;
+}
+
+body #wrapper header div#header #nav {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+body #wrapper header div#header #nav li {
+  display: inline-block;
+  margin-left: 20px;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+
+body #wrapper header div#header #nav li a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body #wrapper div#content {
+  color: #333333;
+}
+
+body #wrapper div#content h1 {
+  font-size: 24px;
+  margin: 15px;
+  margin-left: 0;
+  font-weight: bold;
+}
+
+body #wrapper div#content article p {
+  line-height: 16px;
+  word-spacing: 2px;
+  margin: 10px;
+  margin-left: 0;
+  text-align: justify;
+}

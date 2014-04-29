@@ -1,0 +1,57 @@
+@import compass
+@import compass/reset
+
+#wrapper
+  width: 960px
+  font-family: Constantina, Georgia, 'Nimbus Roman No9 L', serif
+  font-size: 16px
+
+  .menu
+    display: table
+
+    .content
+      display: none
+    &>li
+      background: #B6FF00
+      margin-left: 5px
+      margin-top: 10px
+      width: 150px
+      padding: 10px
+      border-radius: 15px
+      position: relative
+      &:hover
+        .content
+          display: block
+          position: absolute
+          top: -5px
+          left: 170px
+        &>a
+          text-decoration: underline
+        li
+          background: #008000
+          width: 540px
+          padding: 20px
+          margin-left: 0
+          margin-top: 5px
+          border-radius: 10px
+          &:first-fo-type
+            margin-top: 0px
+
+          a
+            color: white
+            text-decoration: none
+          &:hover
+            text-decoration: underline
+            img
+              display: block
+              border-radius: 15px
+              padding-top: 5px
+              width: 530px
+        img
+          display: none
+
+      &>a
+        text-align: center
+        color: black
+        text-decoration: none
+

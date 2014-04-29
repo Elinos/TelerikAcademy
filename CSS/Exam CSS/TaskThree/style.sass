@@ -1,0 +1,61 @@
+@import compass
+@import compass/reset
+
+body
+  font-size: 14px
+  font-family: 'Times New Roman'
+
+#root
+  width: 700px
+.title
+  font-size: 14px
+#previewer
+  display: table
+  border: 2px solid gray
+  height: 10%
+  #large
+    h1
+      font-size: 24px
+      font-weight: bold
+      text-align: center
+      margin: 10px
+    img
+      margin: 10px
+      border: 2px solid gray
+      border-radius: 5px
+
+  #list
+    display: table-cell
+    border: 2px solid gray
+    .title
+      font-size: 20px
+      display: block
+      text-align: center
+      font-weight: bold
+    button
+      width: 100px
+      height: 50px
+      border: 2px solid gray
+      border-radius: 5px
+      background: #CCCCCC
+    ul
+      overflow: auto
+      li
+        border-bottom: 2px solid gray
+        margin: 10px
+        &.current
+          border-radius: 5px
+          background: #CCCCCC
+          img
+            width: 65px
+            margin: 10px
+            margin-left: 70px
+        strong
+          display: block
+          text-align: center
+          font-weight: bold
+        img
+          border-radius: 5px
+          margin-left: 50px
+
+
