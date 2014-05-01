@@ -19,7 +19,7 @@ if (first > second) {
 }
 
 insertDiv("Task One:");
-insertDiv("Smaller number is " + first + " " + " the other is "+ second);
+insertDiv("Smaller number is " + first + " " + " the other is " + second);
 
 //TaskTwo
 var firstNumber = randomInRange(-10, 10),
