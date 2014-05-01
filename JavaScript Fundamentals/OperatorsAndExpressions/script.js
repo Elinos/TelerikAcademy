@@ -1,17 +1,17 @@
-function insertDiv (content) {
+function insertDiv(content) {
   var newDiv = document.createElement("div");
   newDiv.innerHTML = content;
   document.body.appendChild(newDiv);
 }
 
-function randomInRange (from, to) {
+function randomInRange(from, to) {
   return Math.floor(Math.random() * (to - from + 1)) + from;
 }
 
 var randomNumber = randomInRange(1, 10000);
 
 //TaskOne
-function isOdd (number) {
+function isOdd(number) {
   if (number % 2 === 0) {
     return true;
   }
@@ -35,7 +35,7 @@ else {
 }
 
 //TaskThree
-function calculateRectangleArea (width, height) {
+function calculateRectangleArea(width, height) {
   return width * height;
 }
 
@@ -47,7 +47,7 @@ insertDiv("The area of rectangle with width of " + width + " and height of " +
   height + " is " + calculateRectangleArea(width, height));
 
 //TaskFour
-function checkThirdDigitOfNumber (number, checker) {
+function checkThirdDigitOfNumber(number, checker) {
   var numberAsString = number.toString();
   var digitToCheck = numberAsString.charAt(numberAsString.length - 3);
 
@@ -61,7 +61,7 @@ insertDiv("The third digit(right to left) of the number " + randomNumber +
 //TaskFive
 /*jshint bitwise: false*/
 
-function checkIfBitIsSet (number, position) {
+function checkIfBitIsSet(number, position) {
   return !!(number & (1 << position));
 }
 
@@ -113,7 +113,7 @@ else {
 }
 
 //TaskEight
-function calculateAreaOfTrapezoid (baseOne, baseTwo, height) {
+function calculateAreaOfTrapezoid(baseOne, baseTwo, height) {
   return (baseOne + baseTwo) / 2 * height;
 }
 
@@ -126,7 +126,7 @@ insertDiv("The area of Trapezoid with sides " + a + " and " + b +
           " and height " + h + " is " + calculateAreaOfTrapezoid(a, b, h));
 
 //TaskNine
-function inRectangle (rTop, rLeft, rWidth, rHeight, x, y) {
+function inRectangle(rTop, rLeft, rWidth, rHeight, x, y) {
   var rBottom = rTop - rHeight;
   var rRight = rLeft + rWidth;
 

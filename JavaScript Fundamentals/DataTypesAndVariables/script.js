@@ -1,4 +1,4 @@
-function insertDiv (content) {
+function insertDiv(content) {
   var newDiv = document.createElement("div");
   newDiv.innerHTML = content;
   document.body.appendChild(newDiv);
@@ -9,7 +9,7 @@ var pesho, пешо, $test, _task, myVar45, quote;
 
 pesho = 5;
 пешо = true;
-$test = 2.4
+$test = 2.4;
 _task = "my task";
 myVar45 = 45;
 
