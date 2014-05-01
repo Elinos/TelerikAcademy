@@ -16,6 +16,7 @@ function isOdd (number) {
     return true;
   }
 }
+
 insertDiv("Task One:");
 if (isOdd(randomNumber)) {
   insertDiv("The number " + randomNumber + " is odd");
@@ -56,3 +57,17 @@ function checkThirdDigitOfNumber (number, checker) {
 insertDiv("Task Four:");
 insertDiv("The third digit(right to left) of the number " + randomNumber +
           " is 7 : " + checkThirdDigitOfNumber(randomNumber, 7));
+
+//TaskFive
+
+function checkIfBitIsSet (number, position) {
+  return !!(number & (1 << position));
+}
+
+insertDiv("Task Five:");
+if (checkIfBitIsSet(randomNumber, 3)) {
+  insertDiv("The bit at position 3 in number " + randomNumber + "(" + randomNumber.toString(2)+ ")" + " is SET!");
+}
+else {
+  insertDiv("The bit at position 3 in number " + randomNumber + "(" + randomNumber.toString(2)+ ")" + " is NOT SET!");
+}
