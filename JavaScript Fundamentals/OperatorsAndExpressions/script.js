@@ -59,6 +59,7 @@ insertDiv("The third digit(right to left) of the number " + randomNumber +
           " is 7 : " + checkThirdDigitOfNumber(randomNumber, 7));
 
 //TaskFive
+/*jshint bitwise: false*/
 
 function checkIfBitIsSet (number, position) {
   return !!(number & (1 << position));
@@ -70,4 +71,21 @@ if (checkIfBitIsSet(randomNumber, 3)) {
 }
 else {
   insertDiv("The bit at position 3 in number " + randomNumber + "(" + randomNumber.toString(2)+ ")" + " is NOT SET!");
+}
+
+//TaskSix
+function inCircle(center_x, center_y, radius, x, y) {
+  var square_dist = Math.pow((center_x - x), 2) + Math.pow((center_y - y), 2);
+  return square_dist <= Math.pow(radius, 2);
+}
+
+var x = randomInRange(-10, 10);
+var y = randomInRange(-10, 10);
+
+insertDiv("Task Six");
+if (inCircle(0, 0, 5, x, y)) {
+  insertDiv("The point with coordinates x = " + x + " and y = " + y +" is within a circle K(O, 5)!");
+}
+else {
+  insertDiv("The point with coordinates x = " + x + " and y = " + y +" is NOT within a circle K(O, 5)!");
 }
