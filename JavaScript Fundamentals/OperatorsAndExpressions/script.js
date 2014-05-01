@@ -5,7 +5,7 @@ function insertDiv (content) {
 }
 
 function randomInRange (from, to) {
-  return Math.floor((Math.random() * to) + from);
+  return Math.floor(Math.random() * (to - from + 1)) + from;
 }
 
 var randomNumber = randomInRange(1, 10000);
@@ -125,3 +125,25 @@ insertDiv("Task Eight:");
 insertDiv("The area of Trapezoid with sides " + a + " and " + b +
           " and height " + h + " is " + calculateAreaOfTrapezoid(a, b, h));
 
+//TaskNine
+function inRectangle (rTop, rLeft, rWidth, rHeight, x, y) {
+  var rBottom = rTop - rHeight;
+  var rRight = rLeft + rWidth;
+
+  var xWithinRectange = x >= rLeft && x <= rRight;
+  var yWithinRectangle = y >= rBottom && y <= rTop;
+
+  return xWithinRectange && yWithinRectangle;
+}
+var newX = randomInRange(-4, 4);
+var newY = randomInRange(-4, 4);
+
+insertDiv("Task Nine:");
+if (inCircle(1, 1, 3, newX, newY) && !inRectangle(1, -1, 6, 2, newX, newY)) {
+  insertDiv("The point with coordinates x = " + newX + " and y = " + newY +
+            " is within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2)");
+}
+else {
+  insertDiv("The point with coordinates x = " + newX + " and y = " + newY +
+            " is  NOT within the circle K( (1,1), 3) and out of the rectangle R(top=1, left=-1, width=6, height=2)");
+}
