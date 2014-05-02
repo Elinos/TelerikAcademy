@@ -164,5 +164,19 @@ insertDiv("Task Six: ");
 quadraticEquationSolver(firstNumber, secondNumber, thirdNumber);
 
 //TaskSeven
+insertDiv("Task Seven: ");
+insertDiv("Numbers are: ");
+var numbers = [];
+for (var i = 0; i < 5; i++) {
+  numbers[i] = randomInRange(-100, 100);
+  insertDiv(numbers[i]);
+}
+var currentMax = numbers[0];
+for (var i = 1; i < numbers.length; i++) {
+  if (numbers[i] > currentMax) {
+    currentMax = numbers[i];
+  }
+}
+insertDiv("The biggest number is " + currentMax);
 
 //TaskEight
