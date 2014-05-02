@@ -180,3 +180,51 @@ for (var i = 1; i < numbers.length; i++) {
 insertDiv("The biggest number is " + currentMax);
 
 //TaskEight
+var numberToParse = randomInRange(0, 999);
+var hundreds = Math.floor(numberToParse / 100);
+var tens = Math.floor((numberToParse % 100) / 10);
+var ones = Math.floor(numberToParse % 10);
+
+insertDiv("Task Eight:");
+insertDiv("The number with digits: " + numberToParse);
+
+var numberWithWords = "";
+
+var words0 = ["One ", "Two ", "Three ", "Four ", "Five ", "Six ", "Seven ", "Eight ", "Nine "];
+var words1 = ["Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "];
+var words2 = ["", "Twenty ", "Thirty ", "Forty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "];
+
+if (hundreds > 0) {
+  numberWithWords += words0[hundreds - 1] + "Hundred ";
+}
+if (tens > 1) {
+  if (ones === 0 && hundreds > 0) {
+    numberWithWords += "and ";
+  }
+  numberWithWords += words2[tens - 1];
+  if (ones > 0) {
+    numberWithWords += words0[ones - 1];
+  }
+}
+else if (tens === 1) {
+  if (hundreds > 0) {
+    numberWithWords += "and ";
+  }
+  numberWithWords += words1[ones];
+}
+else {
+  if (hundreds > 0) {
+    if (ones > 0) {
+      numberWithWords += "and " + words0[ones - 1];
+    }
+  }
+  else {
+    if (numberToParse === 0) {
+      numberWithWords += "Zero";
+    }
+    else {
+      numberWithWords += words0[ones - 1];
+    }
+  }
+}
+insertDiv("The number with words: " + numberWithWords.trimRight());
