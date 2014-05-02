@@ -103,8 +103,65 @@ else {
 }
 
 //TaskFive
+var input = parseInt(prompt("Please enter a digit"));
+insertDiv("Task Five");
+switch (input) {
+  case 0:
+    insertDiv("The digit you entered was zero");
+    break;
+  case 1:
+    insertDiv("The digit you entered was one");
+    break;
+  case 2:
+    insertDiv("The digit you entered was two");
+    break;
+  case 3:
+    insertDiv("The digit you entered was three");
+    break;
+  case 4:
+    insertDiv("The digit you entered was four");
+    break;
+  case 5:
+    insertDiv("The digit you entered was five");
+    break;
+  case 6:
+    insertDiv("The digit you entered was six");
+    break;
+  case 7:
+    insertDiv("The digit you entered was seven");
+    break;
+  case 8:
+    insertDiv("The digit you entered was eight");
+    break;
+  case 9:
+    insertDiv("The digit you entered was nine");
+    break;
+  default:
+    insertDiv("The digit you entered was invalid!");
+    break;
+}
 
 //TaskSix
+
+function quadraticEquationSolver(a, b, c) {
+  var sqrtpart = b * b - 4 * a * c;
+  var x, x1, x2;
+  if (sqrtpart > 0) {
+    x1 = (-b + Math.sqrt(sqrtpart)) / (2 * a);
+    x2 = (-b - Math.sqrt(sqrtpart)) / (2 * a);
+    insertDiv("Two real solutions: " + x1 + " and " + x2);
+  }
+  else if (sqrtpart < 0) {
+    insertDiv("No real solution!");
+  }
+  else {
+    x = (-b + Math.sqrt(sqrtpart)) / (2 * a);
+    insertDiv("One real solution: " + x);
+  }
+}
+
+insertDiv("Task Six: ");
+quadraticEquationSolver(firstNumber, secondNumber, thirdNumber);
 
 //TaskSeven
 
