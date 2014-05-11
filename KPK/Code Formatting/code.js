@@ -1,12 +1,13 @@
-var b = navigator.appName;
-var addScroll = false;
+var theLayer,
+	b = navigator.appName,
+	addScroll = false;
 if ((navigator.userAgent.indexOf('MSIE 5') > 0) || (navigator.userAgent.indexOf('MSIE 6')) > 0) {
 	addScroll = true;
 }
-var off = 0;
-var txt = "";
-var pX = 0;
-var pY = 0;
+var off = 0,
+	txt = "",
+	pX = 0,
+	pY = 0;
 document.onmousemove = mouseMove;
 if (b === "Netscape") {
 	document.captureEvents(Event.MOUSEMOVE);
@@ -34,7 +35,7 @@ function mouseMove(evn) {
 
 function popTip() {
 	if (b === "Netscape") {
-		var theLayer = eval('document.layers[\'ToolTip\']');
+		theLayer = eval('document.layers[\'ToolTip\']');
 		if ((pX + 120) > window.innerWidth) {
 			pX = window.innerWidth - 150;
 		}
@@ -43,7 +44,7 @@ function popTip() {
 		theLayer.visibility = 'show';
 	}
 	else {
-		var theLayer = eval('document.all[\'ToolTip\']');
+		theLayer = eval('document.all[\'ToolTip\']');
 		if (theLayer) {
 			pX = event.x - 5;
 			pY = event.y;
@@ -82,11 +83,11 @@ function hideMenu1() {
 
 function showMenu1() {
 	if (b === "Netscape") {
-		var theLayer = eval('document.layers[\'menu1\']');
+		theLayer = eval('document.layers[\'menu1\']');
 		theLayer.visibility = 'show';
 	}
 	else {
-		var theLayer = eval('document.all[\'menu1\']');
+		theLayer = eval('document.all[\'menu1\']');
 		theLayer.style.visibility = 'visible';
 	}
 }
@@ -102,11 +103,11 @@ function hideMenu2() {
 
 function showMenu2() {
 	if (b === "Netscape") {
-		var theLayer = eval('document.layers[\'menu2\']');
+		theLayer = eval('document.layers[\'menu2\']');
 		theLayer.visibility = 'show';
 	}
 	else {
-		var theLayer = eval('document.all[\'menu2\']');
+		theLayer = eval('document.all[\'menu2\']');
 		theLayer.style.visibility = 'visible';
 	}
 }
