@@ -22,17 +22,17 @@ function mouseMove(evn) {
 		pY = event.y;
 	} if (b === "Netscape") {
 		if (document.layers['ToolTip'].visibility === 'show') {
-			PopTip();
+			popTip();
 		}
 	}
 	else {
 		if (document.all['ToolTip'].style.visibility === 'visible') {
-			PopTip();
+			popTip();
 		}
 	}
 }
 
-function PopTip() {
+function popTip() {
 	if (b === "Netscape") {
 		var theLayer = eval('document.layers[\'ToolTip\']');
 		if ((pX + 120) > window.innerWidth) {
@@ -61,8 +61,8 @@ function PopTip() {
 	}
 }
 
-function HideTip() {
-	var args = HideTip.arguments;
+function hideTip() {
+	var args = hideTip.arguments;
 	if (b === "Netscape") {
 		document.layers['ToolTip'].visibility = 'hide';
 	}
@@ -71,7 +71,7 @@ function HideTip() {
 	}
 }
 
-function HideMenu1() {
+function hideMenu1() {
 	if (b === "Netscape") {
 		document.layers['menu1'].visibility = 'hide';
 	}
@@ -80,7 +80,7 @@ function HideMenu1() {
 	}
 }
 
-function ShowMenu1() {
+function showMenu1() {
 	if (b === "Netscape") {
 		var theLayer = eval('document.layers[\'menu1\']');
 		theLayer.visibility = 'show';
@@ -91,7 +91,7 @@ function ShowMenu1() {
 	}
 }
 
-function HideMenu2() {
+function hideMenu2() {
 	if (b === "Netscape") {
 		document.layers['menu2'].visibility = 'hide';
 	}
@@ -100,7 +100,7 @@ function HideMenu2() {
 	}
 }
 
-function ShowMenu2() {
+function showMenu2() {
 	if (b === "Netscape") {
 		var theLayer = eval('document.layers[\'menu2\']');
 		theLayer.visibility = 'show';
