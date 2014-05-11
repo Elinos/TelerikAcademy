@@ -27,6 +27,7 @@ function printAllNumbersNotDivisibleBy3and7(n) {
 }
 insertDiv("Task Two:");
 printAllNumbersNotDivisibleBy3and7(100);
+
 //TaskThree
 var numbers = [3, 5, 6, 7, 324, -2];
 var max_of_array = Math.max.apply(Math, numbers);
@@ -35,6 +36,7 @@ var min_of_array = Math.min.apply(Math, numbers);
 insertDiv("Task Three:");
 insertDiv("The max number is " + max_of_array);
 insertDiv("The max number is " + min_of_array);
+
 //TaskFour
 
 function findPropertiesOfObject(object) {
