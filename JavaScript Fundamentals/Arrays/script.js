@@ -45,8 +45,7 @@ function arrayOfMaxSequence(array) {
   for (var i = 1; i < array.length; i++) {
     if (array[i] === currentChar) {
       currentCount++;
-    }
-    else {
+    } else {
       currentChar = array[i];
       currentCount = 1;
     }
@@ -88,7 +87,65 @@ insertDiv("Task Four:");
 insertDiv(maximalIncreasingSequence([3, 2, 3, 4, 2, 2, 4], null).join(", "));
 
 //TaskFive
+function selectionSort(array) {
+  var i, j, tmp, tmp2;
+  for (i = 0; i < array.length - 1; i++) {
+    tmp = i;
+    for (j = i + 1; j < array.length; j++)
+      if (array[j] < array[tmp])
+        tmp = j;
+
+    tmp2 = array[tmp];
+    array[tmp] = array[i];
+    array[i] = tmp2;
+  }
+}
+
+var arrayToSort = [3, 2, 3, 4, 2, 2, 4];
+selectionSort(arrayToSort);
+
+insertDiv("Task Five:");
+insertDiv(arrayToSort);
 
 //TaskSix
+var myArray = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
+var sortedArray = myArray.sort(function(a, b) {
+  return a - b;
+});
+
+var arrayWithMostFrequentNumber = arrayOfMaxSequence(sortedArray);
+
+insertDiv("Task Six:");
+insertDiv("The most frequent number in the array is " +
+  arrayWithMostFrequentNumber[0] + "(" + arrayWithMostFrequentNumber.length + " times)");
 
 //TaskSeven
+function binaryIndexOf(array, searchElement) {
+  /*jshint bitwise: false*/
+  var minIndex = 0;
+  var maxIndex = array.length - 1;
+  var currentIndex;
+  var currentElement;
+
+  while (minIndex <= maxIndex) {
+    currentIndex = (minIndex + maxIndex) / 2 | 0;
+    currentElement = array[currentIndex];
+
+    if (currentElement < searchElement) {
+      minIndex = currentIndex + 1;
+    } else if (currentElement > searchElement) {
+      maxIndex = currentIndex - 1;
+    } else {
+      return currentIndex;
+    }
+  }
+
+  return -1;
+}
+
+var arrayToSearchIn = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95];
+
+var index = binaryIndexOf(arrayToSearchIn, 5);
+
+insertDiv("Task Seven:");
+insertDiv("The index of numer 5 is " + index);
