@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Using Objects</title>
+    </head>
+    <body>
+        <div id="tasks">
+            <h2>Strings</h2>
+            <ol>
+                <li>Write a JavaScript function reverses string and returns it<ul>
+                    <li>Example: &quot;sample&quot; -&gt; &quot;elpmas&quot;.</li>
+                </ul>
+            </li>
+            <li>Write a JavaScript function to check if in a given expression the brackets are put correctly.<ul>
+                <li>Example of correct expression: <code>((a+b)/5-d)</code>.</li>
+                <li>Example of incorrect expression: <code>)(a+b))</code>.</li>
+            </ul>
+        </li>
+        <li><p>Write a JavaScript function that finds how many times a substring is contained in a given text (perform case insensitive search).</p>
+            <p> <strong>Example</strong>: The target substring is <strong>&quot;in&quot;</strong>. The text is as follows: We are liv&lt;b&gt;in&lt;/b&gt;g <strong>in</strong> an yellow submar&lt;b&gt;in&lt;/b&gt;e. We don&#39;t have anyth&lt;b&gt;in&lt;/b&gt;g else. <strong>In</strong>side the submar&lt;b&gt;in&lt;/b&gt;e is very tight. So we are dr&lt;b&gt;in&lt;/b&gt;k&lt;b&gt;in&lt;/b&gt;g all the day. We will move out of it <strong>in</strong> 5 days.</p>
+            <p> The result is: 9.</p>
+        </li>
+        <li><p>You are given a text. Write a function that changes the text in all regions:</p>
+            <ul>
+                <li><code>&lt;upcase&gt;text&lt;/upcase&gt;</code> to uppercase.</li>
+                <li><code>&lt;lowcase&gt;text&lt;/lowcase&gt;</code> to lowercase</li>
+                <li><p><code>&lt;mixcase&gt;text&lt;/mixcase&gt;</code> to mix casing (random)</p>
+                    <p><strong>Example</strong>: <code>We are &lt;mixcase&gt;living&lt;/mixcase&gt; in a &lt;upcase&gt;yellow submarine&lt;/upcase&gt;. We &lt;mixcase&gt;don&#39;t&lt;/mixcase&gt; have &lt;lowcase&gt;anything&lt;/lowcase&gt; else.</code></p>
+                    <p>The expected result: <code>We are LiVinG in a YELLOW SUBMARINE. We dOn&#39;T have anything else.</code></p>
+                    <p>Regions can be nested.</p>
+                </li>
+            </ul>
+        </li>
+        <li>Write a function that replaces non breaking white-spaces in a text with <code>&amp;nbsp;</code></li>
+        <li><p>Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:</p>
+    <pre><code class="lang-html"> &lt;html&gt;
+     &lt;head&gt;
+     &lt;title&gt;Sample site&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+     &lt;div&gt;text&lt;div&gt;more text&lt;/div&gt;and more...&lt;/div&gt;in body
+     &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p> Result: <code>Sample sitetextmore textand more...in body</code></p>
+        </li>
+        <li><p>Write a script that parses an URL address given in the format: <code>[protocol]://[server]/[resource]</code> and extracts from it the <code>[protocol]</code>, <code>[server]</code> and <code>[resource]</code> elements. Return the elements in a JSON object.</p>
+            <p> For example from the URL <code>http://www.devbg.org/forum/index.php</code> the following information should be extracted:</p>
+    <pre><code class="lang-js"> {
+     protocol: &quot;http&quot;,
+     server: &quot;www.devbg.org&quot;,
+     resource: &quot;/forum/index.php&quot;
+}</code></pre>
+        </li>
+        <li><p>Write a JavaScript function that replaces in a HTML document given as string all the tags <code>&lt;a href=&quot;...&quot;&gt;...&lt;/a&gt;</code> with corresponding tags <code>[URL=...]...[/URL]</code>. Sample HTML fragment:</p>
+<pre><code class="lang-html"> &lt;p&gt;Please visit &lt;a href=&quot;http://academy.telerik. com&quot;&gt;our site&lt;/a&gt; to choose a training course. Also visit &lt;a href=&quot;www.devbg.org&quot;&gt;our forum&lt;/a&gt; to discuss the courses.&lt;/p&gt;</code></pre>
+<pre><code class="lang-html"> &lt;p&gt;Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.&lt;/p&gt;</code></pre>
+        </li>
+        <li><p>Write a function for extracting all email addresses from given text. All substrings that match the format <code>&lt;identifier&gt;@&lt;host&gt;...&lt;domain&gt;</code> should be recognized as emails. Return the emails as array of strings.</p>
+        </li>
+        <li><p>Write a program that extracts from a given text all palindromes, e.g. &quot;<code>ABBA</code>&quot;, &quot;<code>lamal</code>&quot; &quot;<code>exe</code>&quot;.</p>
+        </li>
+        <li><p>Write a function that formats a string using placeholders:</p>
+    <pre><code class="lang-js">var str = stringFormat(&quot;Hello {0}!&quot;, &quot;Peter&quot;);
+// str = &quot;Hello Peter!&quot;;</code></pre>
+            <p>The function should work with up to 30 placeholders and all types</p>
+        <pre><code class="lang-js">var format = &quot;{0}, {1}, {0} text {2}&quot;;
+            var str = stringFormat(format, 1, &quot;Pesho&quot;, &quot;Gosho&quot;);
+// str = &quot;1, Pesho, 1 text Gosho&quot;</code></pre>
+        </li>
+        <li><p>Write a function that creates a HTML UL using a template for every HTML LI. The source of the list should an array of elements. Replace all placeholders marked with <code>-{...}-</code> with the value of the corresponding property of the object. Example: </p>
+            <pre><code class="lang-html">&lt;div data-type=&quot;template&quot; id=&quot;list-item&quot;&gt;
+                &lt;strong&gt;-{name}-&lt;/strong&gt; &lt;span&gt;-{age}-&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                <pre><code class="lang-js">var people = [{name: &quot;Peter&quot;, age: 14}, ...];
+                    var tmpl = document.getElementById(&quot;list-item&quot;).innerHTML;
+                    var peopleList = generateList(people, template);
+// peopleList = &quot;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Peter&lt;/strong&gt; &lt;span&gt;14&lt;/span&gt;&lt;/li&gt;&lt;li&gt;...&lt;/li&gt;...&lt;/ul&gt;&quot;</code></pre>
+        </li>
+    </ol>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
