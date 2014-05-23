@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RotatedSize", "RotatedSize\RotatedSize.csproj", "{0FC3AF14-1FEE-4CC0-A104-0BE61DEC4697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintStatistics", "PrintStatistics\PrintStatistics.csproj", "{52A59369-FAAB-489A-9823-C6C99B306395}"
+EndProject
+Global
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 4203ad73-68fe-45c5-8b5e-7e96858bf786
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FC3AF14-1FEE-4CC0-A104-0BE61DEC4697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FC3AF14-1FEE-4CC0-A104-0BE61DEC4697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FC3AF14-1FEE-4CC0-A104-0BE61DEC4697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FC3AF14-1FEE-4CC0-A104-0BE61DEC4697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A59369-FAAB-489A-9823-C6C99B306395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A59369-FAAB-489A-9823-C6C99B306395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A59369-FAAB-489A-9823-C6C99B306395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A59369-FAAB-489A-9823-C6C99B306395}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
