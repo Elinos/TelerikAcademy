@@ -6,14 +6,12 @@
     {
         private double radius;
 
-        public Circle()
-            : base()
+        public Circle() : base()
         {
             this.Radius = 1;
         }
 
-        public Circle(double radius)
-            : base()
+        public Circle(double radius) : base()
         {
             this.Radius = radius;
         }
