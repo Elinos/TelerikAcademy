@@ -1,0 +1,26 @@
+div {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            width:132px;
+        }
+
+        ul {
+            position: absolute;
+            top: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+            ul li {
+                background-color: lightblue;
+                border: 1px solid gray;
+                width: 130px;
+                text-align: center;
+            }
+
+
+        #current {
+            text-align: center;
+            background-color:lightblue;
+        }
