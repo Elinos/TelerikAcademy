@@ -1,0 +1,21 @@
+.slide-container {
+    display: inline-block;
+    width: 420px;
+    height: 420px;
+    text-align: center;
+    padding: 20px;
+}
+
+.slide-container * {
+    display: none;
+}
+
+.current, .leftArrow, .rightArrow {
+    display: inline-block;
+}
+
+.leftArrow, .rightArrow {
+    padding-top: 210px;
+    cursor: pointer;
+    font-size: 3em;
+}
