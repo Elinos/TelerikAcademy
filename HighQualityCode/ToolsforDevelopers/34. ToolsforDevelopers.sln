@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. SimpleT4Template", "02. SimpleT4Template\02. SimpleT4Template.csproj", "{8242EFF9-70DA-4926-96E2-00BCFF3E023A}"
+EndProject
+Global
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 045e5ec5-256f-4c04-b120-fb8c45ae25eb
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8242EFF9-70DA-4926-96E2-00BCFF3E023A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8242EFF9-70DA-4926-96E2-00BCFF3E023A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8242EFF9-70DA-4926-96E2-00BCFF3E023A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8242EFF9-70DA-4926-96E2-00BCFF3E023A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
