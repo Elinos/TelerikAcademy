@@ -7,7 +7,6 @@ define(['courses/student'], function(Student) {
       this.name = name;
       this.totalScoreFormula = totalScoreFormula;
       this._students = [];
-      this._totalScores = [];
     }
 
     Course.prototype.addStudent = function(student) {
@@ -20,6 +19,7 @@ define(['courses/student'], function(Student) {
 
     Course.prototype.calculateResults = function() {
       var student, _i, _len, _ref;
+      this._totalScores = [];
       _ref = this._students;
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         student = _ref[_i];

@@ -3,12 +3,12 @@ define ['courses/student'], (Student) ->
   class Course
     constructor: (@name, @totalScoreFormula) ->
       @_students = []
-      @_totalScores = []
     addStudent: (student) ->
       throw new Error "You can add only students!" if student not instanceof Student
       @_students.push student
       @
     calculateResults: () ->
+      @_totalScores = []
       for student in @_students
         @_totalScores.push
           student: student

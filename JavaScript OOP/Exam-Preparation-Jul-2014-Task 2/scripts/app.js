@@ -27,6 +27,8 @@
       }
 
       jsOopCourse.calculateResults();
+      jsOopCourse.calculateResults();
+      jsOopCourse.calculateResults();
 
       var topByExam = jsOopCourse
         .getTopStudentsByExam();
