@@ -32,11 +32,10 @@ define(['courses/student'], function(Student) {
     };
 
     Course.prototype._getSortedStudents = function(sortBy) {
-      var sortedStudents;
       if (!(this._totalScores && this._totalScores.length === this._students.length)) {
         this.calculateResults();
       }
-      return sortedStudents = this._totalScores.sort(sortBy);
+      return this._totalScores.sort(sortBy);
     };
 
     Course.prototype.getTopStudentsByExam = function(count) {
@@ -44,7 +43,11 @@ define(['courses/student'], function(Student) {
       sortedStudentsByExam = this._getSortedStudents(function(st1, st2) {
         return st2.student.exam - st1.student.exam;
       });
-      return sortedStudentsByExam.slice(0, count);
+      if (count) {
+        return sortedStudentsByExam.slice(0, count);
+      } else {
+        return sortedStudentsByExam;
+      }
     };
 
     Course.prototype.getTopStudentsByTotalScore = function(count) {
@@ -52,7 +55,11 @@ define(['courses/student'], function(Student) {
       sortedByTotalScores = this._getSortedStudents(function(st1, st2) {
         return st2.totalScore - st1.totalScore;
       });
-      return sortedByTotalScores.slice(0, count);
+      if (count) {
+        return sortedByTotalScores.slice(0, count);
+      } else {
+        return sortedByTotalScores;
+      }
     };
 
     return Course;

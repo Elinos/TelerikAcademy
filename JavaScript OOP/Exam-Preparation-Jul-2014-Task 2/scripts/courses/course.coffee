@@ -17,11 +17,11 @@ define ['courses/student'], (Student) ->
     _getSortedStudents: (sortBy) ->
       unless @_totalScores and @_totalScores.length is @_students.length
         @calculateResults()
-      sortedStudents =  @_totalScores.sort sortBy
+      @_totalScores.sort sortBy
     getTopStudentsByExam: (count) ->
       sortedStudentsByExam = @_getSortedStudents (st1, st2) -> st2.student.exam - st1.student.exam
-      sortedStudentsByExam[...count]
+      if count then sortedStudentsByExam[...count] else sortedStudentsByExam
     getTopStudentsByTotalScore: (count) ->
       sortedByTotalScores = @_getSortedStudents (st1, st2) -> st2.totalScore - st1.totalScore
-      sortedByTotalScores[...count]
+      if count then sortedByTotalScores[...count] else sortedByTotalScores
   Course

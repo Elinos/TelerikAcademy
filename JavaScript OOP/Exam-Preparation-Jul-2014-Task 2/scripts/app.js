@@ -29,10 +29,10 @@
       jsOopCourse.calculateResults();
 
       var topByExam = jsOopCourse
-        .getTopStudentsByExam(5);
+        .getTopStudentsByExam();
 
       var topByTotalScore = jsOopCourse
-        .getTopStudentsByTotalScore(5);
+        .getTopStudentsByTotalScore();
       console.dir(topByExam);
       console.dir(topByTotalScore);
     });
