@@ -26,15 +26,12 @@
         jsOopCourse.addStudent(student);
       }
 
-      jsOopCourse.calculateResults();
-      jsOopCourse.calculateResults();
-      jsOopCourse.calculateResults();
-
       var topByExam = jsOopCourse
-        .getTopStudentsByExam();
+        .getTopStudentsByExam(3);
 
       var topByTotalScore = jsOopCourse
         .getTopStudentsByTotalScore();
+
       console.dir(topByExam);
       console.dir(topByTotalScore);
     });
