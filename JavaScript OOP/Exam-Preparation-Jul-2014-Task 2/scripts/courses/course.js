@@ -43,7 +43,7 @@ define(['courses/student'], function(Student) {
       sortedStudentsByExam = this._getSortedStudents(function(st1, st2) {
         return st2.student.exam - st1.student.exam;
       });
-      if (count) {
+      if (count != null) {
         return sortedStudentsByExam.slice(0, count);
       } else {
         return sortedStudentsByExam;
@@ -55,7 +55,7 @@ define(['courses/student'], function(Student) {
       sortedByTotalScores = this._getSortedStudents(function(st1, st2) {
         return st2.totalScore - st1.totalScore;
       });
-      if (count) {
+      if (count != null) {
         return sortedByTotalScores.slice(0, count);
       } else {
         return sortedByTotalScores;

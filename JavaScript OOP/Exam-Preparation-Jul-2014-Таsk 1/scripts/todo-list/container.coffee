@@ -6,7 +6,7 @@ define ['todo-list/section'], (Section) ->
     add: (section) ->
       throw new Error "You can add only sections!" if section not instanceof Section
       @sections.push section
-      @
+      this
     getData: () ->
       containerSections = (section.getData for section in @sections)
       @sections
