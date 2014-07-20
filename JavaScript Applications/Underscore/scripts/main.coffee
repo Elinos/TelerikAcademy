@@ -62,8 +62,7 @@ require ['chance', 'underscore', 'student', 'animal', 'book', 'person'],
                              .last()
                              .value()
 
-  console.log "Print student with highest marks."
-  console.log studentWithHighestMarks
+  console.log "Student with highest marks is #{studentWithHighestMarks}"
 
   #Task Four
   # animalsGroupedBySpeciesAndSortedByLegs = _.chain animals
@@ -75,46 +74,39 @@ require ['chance', 'underscore', 'student', 'animal', 'book', 'person'],
                                           .groupBy 'specie'
                                           .value()
 
-  console.log "Print animals grouped by species and sorted by number of legs."
+  console.log "Prints animals grouped by species and sorted by number of legs."
   console.log animalsGroupedBySpeciesAndSortedByLegs
 
   #Task Five
   totalNumberOfLegs = _.reduce animals, ((acc, animal) -> acc + animal.legs), 0
 
-  console.log "Print total number of legs."
-  console.log totalNumberOfLegs
+  console.log "Total number of legs are #{totalNumberOfLegs}"
 
   #Task Six
   mostPopularAuthor = _.chain books
                        .groupBy 'author'
-                       .sortBy 'length'
-                       .last()
+                       .max (group) -> group.length
                        .first()
                        .value()
                        .author
 
-  console.log "Print the most popular author."
-  console.log mostPopularAuthor
+  console.log "The most popular author is #{mostPopularAuthor}"
 
   #Task Seven
   groupAndSortPeopleBy = (property) ->
     biggestGroup = _.chain people
                     .groupBy property
-                    .sortBy 'length'
-                    .last()
+                    .max (group) -> group.length
                     .value()
 
     count = biggestGroup.length
     mostCommonProperty = (_.last biggestGroup)[property]
     {count: count, mostCommonProperty : mostCommonProperty }
 
-  mostCommonFirstNameObj = groupAndSortPeopleBy 'firstName'
-  mostCommonLastNameObj = groupAndSortPeopleBy 'lastName'
+  byFirstName = groupAndSortPeopleBy 'firstName'
+  byLastName = groupAndSortPeopleBy 'lastName'
 
-  console.log "The most popular first name is #{mostCommonFirstNameObj.mostCommonProperty}
-               - count: #{mostCommonFirstNameObj.count}"
-  console.log "The most popular last name is #{mostCommonLastNameObj.mostCommonProperty}
-               - count: #{mostCommonLastNameObj.count}"
-
-
-
+  console.log "The most popular first name is #{byFirstName.mostCommonProperty}
+               - count: #{byFirstName.count}"
+  console.log "The most popular last name is #{byLastName.mostCommonProperty}
+               - count: #{byLastName.count}"
