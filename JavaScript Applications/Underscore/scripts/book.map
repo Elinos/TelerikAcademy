@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "book.js",
+  "sourceRoot": "",
+  "sources": [
+    "book.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,MAAA,CAAO,EAAP,EAAW,SAAA,GAAA;AACT,MAAA,IAAA;AAAA,EAAM;AACS,IAAA,cAAE,MAAF,EAAW,KAAX,GAAA;AAAmB,MAAlB,IAAC,CAAA,SAAA,MAAiB,CAAA;AAAA,MAAT,IAAC,CAAA,QAAA,KAAQ,CAAnB;IAAA,CAAb;;gBAAA;;MADF,CAAA;SAEA,KAHS;AAAA,CAAX,CAAA,CAAA"
+}

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "animal.js",
+  "sourceRoot": "",
+  "sources": [
+    "animal.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,MAAA,CAAO,EAAP,EAAW,SAAA,GAAA;AACT,MAAA,MAAA;AAAA,EAAM;AACS,IAAA,gBAAE,MAAF,EAAW,IAAX,GAAA;AAAkB,MAAjB,IAAC,CAAA,SAAA,MAAgB,CAAA;AAAA,MAAR,IAAC,CAAA,OAAA,IAAO,CAAlB;IAAA,CAAb;;kBAAA;;MADF,CAAA;SAEA,OAHS;AAAA,CAAX,CAAA,CAAA"
+}

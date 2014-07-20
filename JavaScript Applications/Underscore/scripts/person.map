@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "person.js",
+  "sourceRoot": "",
+  "sources": [
+    "person.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,MAAA,CAAO,EAAP,EAAW,SAAA,GAAA;AACT,MAAA,MAAA;AAAA,EAAM;AACS,IAAA,gBAAE,SAAF,EAAc,QAAd,GAAA;AAAyB,MAAxB,IAAC,CAAA,YAAA,SAAuB,CAAA;AAAA,MAAZ,IAAC,CAAA,WAAA,QAAW,CAAzB;IAAA,CAAb;;kBAAA;;MADF,CAAA;SAEA,OAHS;AAAA,CAAX,CAAA,CAAA"
+}
