@@ -23,7 +23,7 @@ define ['jquery'], ($) ->
       @$container.append $result.prepend("#{guessedNumber} : ")
 
     drawError: (guessedNumber) ->
-      $errorMsg = $("<div />").text("Invalid number: '#{guessedNumber}'").addClass('error')
+      $errorMsg = $("<div />").text("Invalid number: '#{guessedNumber}'!").addClass('error')
       @$container.append($errorMsg.fadeIn(1500).fadeOut(1500))
 
     drawWinScreen: (score) ->

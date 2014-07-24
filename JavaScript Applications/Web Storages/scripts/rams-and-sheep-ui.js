@@ -32,7 +32,7 @@ define(['jquery'], function($) {
 
     RamsAndSheepUI.prototype.drawError = function(guessedNumber) {
       var $errorMsg;
-      $errorMsg = $("<div />").text("Invalid number: '" + guessedNumber + "'").addClass('error');
+      $errorMsg = $("<div />").text("Invalid number: '" + guessedNumber + "'!").addClass('error');
       return this.$container.append($errorMsg.fadeIn(1500).fadeOut(1500));
     };
 
