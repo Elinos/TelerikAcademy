@@ -1,0 +1,21 @@
+{
+  "name": "scripts",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Elinos/TelerikAcademy",
+  "authors": [
+    "Kiril Tsarnakliyski <elinos@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.14",
+    "sammy": "~0.7.5"
+  }
+}
