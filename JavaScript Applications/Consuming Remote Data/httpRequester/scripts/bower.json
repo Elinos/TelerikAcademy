@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "jquery": "~2.1.1",
-    "q": "~2.0.0",
     "requirejs": "~2.1.14",
     "rsvp": "~3.0.8"
   }
