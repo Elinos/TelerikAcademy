@@ -17,6 +17,8 @@
   "dependencies": {
     "jquery": "~2.1.1",
     "requirejs": "~2.1.14",
-    "rsvp": "~3.0.8"
+    "rsvp": "~3.0.8",
+    "mocha": "~1.21.3",
+    "chai": "~1.9.1"
   }
 }
