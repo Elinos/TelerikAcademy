@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "httpRequester.tests.js",
+  "sourceRoot": "",
+  "sources": [
+    "httpRequester.tests.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,MAAA,CAAO,CAAC,MAAD,EAAQ,eAAR,CAAP,EAAiC,SAAC,IAAD,EAAO,aAAP,GAAA;AAC/B,MAAA,MAAA;AAAA,EAAA,MAAA,GAAS,IAAI,CAAC,MAAL,CAAA,CAAT,CAAA;SAEA,QAAA,CAAS,uBAAT,EAAkC,SAAA,GAAA;WAChC,EAAA,CAAG,uBAAH,EAA4B,SAAA,GAAA;aAC1B,aAAa,CAAC,OAAd,CAAA,CAAuB,CAAC,MAAM,CAAC,SAA/B,CAAyC,MAAzC,EAD0B;IAAA,CAA5B,EADgC;EAAA,CAAlC,EAH+B;AAAA,CAAjC,CAAA,CAAA"
+}
