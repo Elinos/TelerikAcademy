@@ -55,7 +55,7 @@
     <Compile Include="ISanitizer.cs" />
     <Compile Include="LineParser.cs" />
     <Compile Include="ListCommand.cs" />
-    <Compile Include="ListEntries.cs" />
+    <Compile Include="ListEntry.cs" />
     <Compile Include="IPhonebookRepository.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="PhonebookRepository.cs" />

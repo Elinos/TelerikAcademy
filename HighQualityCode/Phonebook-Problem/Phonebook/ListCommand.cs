@@ -21,7 +21,7 @@
         {
             try
             {
-                IEnumerable<ListEntries> entries = this.phonebookDatabase.ListEntries(
+                IEnumerable<ListEntry> entries = this.phonebookDatabase.ListEntries(
                     int.Parse(this.arguments[0]),
                     int.Parse(this.arguments[1]));
                 foreach (var entry in entries)

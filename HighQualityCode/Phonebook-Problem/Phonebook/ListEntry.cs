@@ -4,7 +4,7 @@ namespace Phonebook
     using System.Collections.Generic;
     using System.Text;
 
-    public class ListEntries : IComparable<ListEntries>
+    public class ListEntry : IComparable<ListEntry>
     {
         private string name;
         private string nameToLower;
@@ -52,7 +52,7 @@ namespace Phonebook
             return entry.ToString();
         }
 
-        public int CompareTo(ListEntries other)
+        public int CompareTo(ListEntry other)
         {
             return this.nameToLower.CompareTo(other.nameToLower);
         }

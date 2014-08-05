@@ -7,18 +7,18 @@ namespace Phonebook
 
     public class PhonebookRepository : IPhonebookRepository
     {
-        private readonly OrderedSet<ListEntries> sorted = new OrderedSet<ListEntries>();
-        private readonly Dictionary<string, ListEntries> dict = new Dictionary<string, ListEntries>();
-        private readonly MultiDictionary<string, ListEntries> multidict = new MultiDictionary<string, ListEntries>(false);
+        private readonly OrderedSet<ListEntry> sorted = new OrderedSet<ListEntry>();
+        private readonly Dictionary<string, ListEntry> dict = new Dictionary<string, ListEntry>();
+        private readonly MultiDictionary<string, ListEntry> multidict = new MultiDictionary<string, ListEntry>(false);
 
         public bool AddPhone(string name, IEnumerable<string> nums)
         {
             string nameToLower = name.ToLowerInvariant();
-            ListEntries entry;
+            ListEntry entry;
             bool isNewEntry = !this.dict.TryGetValue(nameToLower, out entry);
             if (isNewEntry)
             {
-                entry = new ListEntries();
+                entry = new ListEntry();
                 entry.Name = name;
                 entry.Numbers = new SortedSet<string>();
                 this.dict.Add(nameToLower, entry);
@@ -50,18 +50,18 @@ namespace Phonebook
             return found.Count;
         }
 
-        public ListEntries[] ListEntries(int first, int num)
+        public ListEntry[] ListEntries(int first, int num)
         {
             if (first < 0 || first + num > this.dict.Count)
             {
                 throw new ArgumentOutOfRangeException("Invalid range!");
             }
 
-            ListEntries[] list = new ListEntries[num];
+            ListEntry[] list = new ListEntry[num];
 
             for (int i = first; i <= first + num - 1; i++)
             {
-                ListEntries entry = this.sorted[i];
+                ListEntry entry = this.sorted[i];
                 list[i - first] = entry;
             }
 

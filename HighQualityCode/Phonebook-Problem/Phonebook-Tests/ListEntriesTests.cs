@@ -45,7 +45,7 @@
         {
             var testName = "TestUser";
             var testNumbers = new SortedSet<string> { "+359899777235", "+359888777777" };
-            ListEntries[] expected = new ListEntries[] { new ListEntries { Name = testName, Numbers = testNumbers } };
+            ListEntry[] expected = new ListEntry[] { new ListEntry { Name = testName, Numbers = testNumbers } };
 
             var testPhoneDatabase = new PhonebookRepository();
             testPhoneDatabase.AddPhone("TestUser", new string[] { "+359899777235" });
@@ -72,9 +72,9 @@
             var testNumbersOne = new SortedSet<string> { "+359899777235" };
             var testNumbersTwo = new SortedSet<string> { "+359888777777" };
 
-            ListEntries listEntryOne = new ListEntries { Name = testNameOne, Numbers = testNumbersOne };
-            ListEntries listEntryTwo = new ListEntries { Name = testNameTwo, Numbers = testNumbersTwo };
-            ListEntries[] expected = new ListEntries[] { listEntryOne, listEntryTwo };
+            ListEntry listEntryOne = new ListEntry { Name = testNameOne, Numbers = testNumbersOne };
+            ListEntry listEntryTwo = new ListEntry { Name = testNameTwo, Numbers = testNumbersTwo };
+            ListEntry[] expected = new ListEntry[] { listEntryOne, listEntryTwo };
 
             var testPhoneDatabase = new PhonebookRepository();
             testPhoneDatabase.AddPhone("TestUserOne", new string[] { "+359899777235" });
@@ -99,8 +99,8 @@
             var testNameTwo = "TestUserTwo";
             var testNumbersTwo = new SortedSet<string> { "+359888777777" };
 
-            ListEntries listEntryTwo = new ListEntries { Name = testNameTwo, Numbers = testNumbersTwo };
-            ListEntries[] expected = new ListEntries[] { listEntryTwo };
+            ListEntry listEntryTwo = new ListEntry { Name = testNameTwo, Numbers = testNumbersTwo };
+            ListEntry[] expected = new ListEntry[] { listEntryTwo };
 
             var testPhoneDatabase = new PhonebookRepository();
             testPhoneDatabase.AddPhone("TestUserOne", new string[] { "+359899777235" });
