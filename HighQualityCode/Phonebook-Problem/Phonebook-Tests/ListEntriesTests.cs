@@ -5,6 +5,7 @@
     using System.Linq;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Phonebook;
+    using System.Collections;
 
     [TestClass]
     public class ListEntriesTests
@@ -45,16 +46,22 @@
             var testName = "TestUser";
             var testNumbers = new SortedSet<string> { "+359899777235", "+359888777777" };
             ListEntries[] expected = new ListEntries[] { new ListEntries { Name = testName, Numbers = testNumbers } };
-            string expectedToString = expected.ToString();
 
             var testPhoneDatabase = new PhonebookRepository();
             testPhoneDatabase.AddPhone("TestUser", new string[] { "+359899777235" });
             testPhoneDatabase.AddPhone("testuser", new string[] { "+359888777777" });
 
             var actual = testPhoneDatabase.ListEntries(0, 1);
-            string actualToString = actual.ToString();
 
-            Assert.AreEqual(expectedToString, actualToString);
+            Assert.AreEqual(expected.Count(), actual.Count());
+
+            IEnumerator e1 = expected.GetEnumerator();
+            IEnumerator e2 = actual.GetEnumerator();
+
+            while (e1.MoveNext() && e2.MoveNext())
+            {
+                Assert.AreEqual(e1.Current.ToString(), e2.Current.ToString());
+            }
         }
 
         [TestMethod]
@@ -68,16 +75,48 @@
             ListEntries listEntryOne = new ListEntries { Name = testNameOne, Numbers = testNumbersOne };
             ListEntries listEntryTwo = new ListEntries { Name = testNameTwo, Numbers = testNumbersTwo };
             ListEntries[] expected = new ListEntries[] { listEntryOne, listEntryTwo };
-            string expectedToString = expected.ToString();
 
             var testPhoneDatabase = new PhonebookRepository();
             testPhoneDatabase.AddPhone("TestUserOne", new string[] { "+359899777235" });
             testPhoneDatabase.AddPhone("TestUserTwo", new string[] { "+359888777777" });
 
-            var actual = testPhoneDatabase.ListEntries(0, 1);
-            string actualToString = actual.ToString();
+            var actual = testPhoneDatabase.ListEntries(0, 2);
 
-            Assert.AreEqual(expectedToString, actualToString);
+            Assert.AreEqual(expected.Count(), actual.Count());
+
+            IEnumerator e1 = expected.GetEnumerator();
+            IEnumerator e2 = actual.GetEnumerator();
+
+            while (e1.MoveNext() && e2.MoveNext())
+            {
+                Assert.AreEqual(e1.Current.ToString(), e2.Current.ToString());
+            }
+        }
+
+        [TestMethod]
+        public void TestPages()
+        {
+            var testNameTwo = "TestUserTwo";
+            var testNumbersTwo = new SortedSet<string> { "+359888777777" };
+
+            ListEntries listEntryTwo = new ListEntries { Name = testNameTwo, Numbers = testNumbersTwo };
+            ListEntries[] expected = new ListEntries[] { listEntryTwo };
+
+            var testPhoneDatabase = new PhonebookRepository();
+            testPhoneDatabase.AddPhone("TestUserOne", new string[] { "+359899777235" });
+            testPhoneDatabase.AddPhone("TestUserTwo", new string[] { "+359888777777" });
+
+            var actual = testPhoneDatabase.ListEntries(1, 1);
+
+            Assert.AreEqual(expected.Count(), actual.Count());
+
+            IEnumerator e1 = expected.GetEnumerator();
+            IEnumerator e2 = actual.GetEnumerator();
+
+            while (e1.MoveNext() && e2.MoveNext())
+            {
+                Assert.AreEqual(e1.Current.ToString(), e2.Current.ToString());
+            }
         }
     }
 }
