@@ -1,10 +1,10 @@
-﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Phonebook;
-
-namespace PhonebookTests
+﻿namespace PhonebookTests
 {
+    using System;
+    using System.Linq;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Phonebook;
+
     /// <summary>
     /// Summary description for JustMockTest
     /// </summary>

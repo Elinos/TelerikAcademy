@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Phonebook;
-
-namespace Phonebook_Tests
+﻿namespace Phonebook_Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Phonebook;
+
     [TestClass]
     public class ListEntriesTests
     {
@@ -22,7 +22,6 @@ namespace Phonebook_Tests
             {
                 Assert.IsTrue(ex is ArgumentOutOfRangeException);
             }
-
         }
 
         [TestMethod]
@@ -38,7 +37,6 @@ namespace Phonebook_Tests
             {
                 Assert.IsTrue(ex is ArgumentOutOfRangeException);
             }
-
         }
 
         [TestMethod]
