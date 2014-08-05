@@ -5,16 +5,10 @@
 
     public class LineParser : ILineParser
     {
-        private readonly ISanitizer sanitizer;
-        private readonly IPhonebookRepository phonebookDatabase;
-        private readonly IPrinter printer;
         private readonly ICommandFactory factory;
 
         public LineParser(ISanitizer sanitizer, IPhonebookRepository phonebookDatabase, IPrinter printer)
         {
-            this.sanitizer = sanitizer;
-            this.phonebookDatabase = phonebookDatabase;
-            this.printer = printer;
             this.factory = new CommandFactory(sanitizer, phonebookDatabase, printer);
         }
 
