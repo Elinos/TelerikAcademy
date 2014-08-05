@@ -11,33 +11,19 @@
     public class ListEntriesTests
     {
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestListPhonesWithNoEntries()
         {
-            try
-            {
-                var testPhoneDatabase = new PhonebookRepository();
-                testPhoneDatabase.ListEntries(0, 1);
-                Assert.Fail("No exception thrown");
-            }
-            catch (Exception ex)
-            {
-                Assert.IsTrue(ex is ArgumentOutOfRangeException);
-            }
+            var testPhoneDatabase = new PhonebookRepository();
+            testPhoneDatabase.ListEntries(0, 1);
         }
 
         [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestWithInvalidRange()
         {
-            try
-            {
-                var testPhoneDatabase = new PhonebookRepository();
-                testPhoneDatabase.ListEntries(-1, 0);
-                Assert.Fail("No exception thrown");
-            }
-            catch (Exception ex)
-            {
-                Assert.IsTrue(ex is ArgumentOutOfRangeException);
-            }
+            var testPhoneDatabase = new PhonebookRepository();
+            testPhoneDatabase.ListEntries(-1, 0);
         }
 
         [TestMethod]
