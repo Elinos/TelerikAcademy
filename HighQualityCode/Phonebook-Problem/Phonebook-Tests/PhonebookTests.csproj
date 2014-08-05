@@ -9,8 +9,8 @@
     <ProjectGuid>{1B31651B-CE9D-4FB5-8A4C-1D1566A5AB67}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Phonebook_Tests</RootNamespace>
-    <AssemblyName>Phonebook_Tests</AssemblyName>
+    <RootNamespace>PhonebookTests</RootNamespace>
+    <AssemblyName>PhonebookTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

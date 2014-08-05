@@ -1,4 +1,4 @@
-﻿namespace Phonebook_Tests
+﻿namespace PhonebookTests
 {
     using System;
     using System.Collections;
