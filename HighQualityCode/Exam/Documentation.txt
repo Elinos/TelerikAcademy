@@ -1,0 +1,44 @@
+Design pattern: Simple Factory
+	Interface IManufacturerCreator and class ManufacturerCreator
+
+Design pattern: Strategy
+	Interfaces IPC, ILaptop, IServer, ICommandExecutor...
+
+Design pattern: Template Method
+	Abstract class Cpu and template abstract method CheckMaxValueOfCpu();
+
+Design pattern: Abstract factory
+	abstract class Manufacturer, and concrete classes HP, Dell and Lenovo, products IPC, IServer and ILaptop
+
+Design pattern: Composite
+	* 
+
+Design pattern: Mediator
+	* 
+
+Found bottlenecks:
+	In SquareNumber(former 32/64) wasn't just squering the number  
+	in former rand(now GenerateRandomNumber) method - getting random number from 0 to 1000 and then checking if it's OK
+All bottlenecks are fixed!
+
+Found bugs:
+	Missing "%" in ChargeBattery 
+	Videocard wasn't inicialized in the start so it was trowing Null Reference Exception 
+	Several comping errors
+	All bugs are fixed!
+
+Single responsibility principle
+	All classes/methods do only what they are responsible for.
+For example the class HardDrive was even acting like video card! 
+
+Open/closed principle
+	I use abstract classes and interfaces, so they can be re implemented without changing the base class 
+
+Liskov substitution principle
+	The principle is kept in all base classes and in their successors  
+
+Interface segregation principle
+	All interfaces are simple and contains only what is needed
+
+Dependency inversion principle
+	I used Strategy pattern that I already described, so you can change or make new implementation of the given interface in EntryPoint.
