@@ -85,7 +85,7 @@
 
                 return this.hds.First().LoadData(address);
             }
-            else if (true)
+            else
             {
                 return this.data[address];
             }

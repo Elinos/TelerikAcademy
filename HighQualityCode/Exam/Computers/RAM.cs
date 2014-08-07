@@ -4,9 +4,9 @@
     {
         private int value;
 
-        internal RAM(int a)
+        internal RAM(int amount)
         {
-            this.Amount = a;
+            this.Amount = amount;
         }
 
         private int Amount { get; set; }

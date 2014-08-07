@@ -18,5 +18,14 @@
             var actual = testCpu.GenerateRandomNumber(1, 10);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TestDoesItThrowException()
+        {
+            byte cores = 2;
+            var testCpu = Mock.Create<Cpu>(Behavior.CallOriginal, cores);
+            testCpu.GenerateRandomNumber(11, 10);
+        }
     }
 }

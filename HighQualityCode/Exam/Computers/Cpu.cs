@@ -23,6 +23,11 @@
 
         public int GenerateRandomNumber(int minValue, int maxValue)
         {
+            if (minValue > maxValue)
+            {
+                throw new ArgumentException("minValue must be greater than maxValue");
+            }
+
             int randomNumber = RandomNumberGenerator.Next(minValue, maxValue + 1);
             return randomNumber;
         }
