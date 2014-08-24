@@ -1,0 +1,5 @@
+USE TelerikAcademy
+GO
+
+ALTER TABLE Users 
+ADD GroupID int NOT NULL DEFAULT 1
