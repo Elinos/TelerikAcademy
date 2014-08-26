@@ -47,8 +47,8 @@ namespace TaskThree
         {
             List<Product> products = new List<Product>();
             string commandText = "SELECT p.ProductName, c.CategoryName FROM Products p 	INNER JOIN Categories c ON p.CategoryID = c.CategoryID";
-            SqlCommand cmdSelectProject = new SqlCommand(commandText, dbCon);
-            SqlDataReader reader = cmdSelectProject.ExecuteReader();
+            SqlCommand retrieveCommand = new SqlCommand(commandText, dbCon);
+            SqlDataReader reader = retrieveCommand.ExecuteReader();
             using (reader)
             {
                 while (reader.Read())

@@ -46,8 +46,8 @@ namespace TaskTwo
         private static List<Category> RetrieveNameAndDiscription()
         {
             List<Category> categories = new List<Category>();
-            SqlCommand cmdSelectProject = new SqlCommand("SELECT * FROM Categories", dbCon);
-            SqlDataReader reader = cmdSelectProject.ExecuteReader();
+            SqlCommand retrieveCommand = new SqlCommand("SELECT * FROM Categories", dbCon);
+            SqlDataReader reader = retrieveCommand.ExecuteReader();
             using (reader)
             {
                 while (reader.Read())
