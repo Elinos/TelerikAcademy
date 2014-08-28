@@ -8,6 +8,8 @@ namespace TaskOne
         static void Main(string[] args)
         {
             var tree = ReadInput();
+            Console.WriteLine(new String('-', 50));
+            tree.PrintTree();
             var root = tree.FindRoot();
             Console.WriteLine(new String('-', 50));
             Console.WriteLine("Root: {0}", root.Value);
@@ -24,8 +26,10 @@ namespace TaskOne
             var middles = tree.FindMiddles();
             foreach (var middle in middles)
             {
-                Console.Write("Middle: ");
+                Console.Write("\nMiddle: ");
                 Console.WriteLine(middle.Value);
+                Console.WriteLine("\nMiddleTree");
+                middle.PrintNodeTree();
             }
 
             Console.WriteLine(new String('-', 50));

@@ -98,5 +98,11 @@ namespace TaskOne
             }
             return longestPath;
         }
+
+        public void PrintTree()
+        {
+            Console.WriteLine("Tree");
+            FindRoot().PrintNodeTree();
+        }
     }
 }

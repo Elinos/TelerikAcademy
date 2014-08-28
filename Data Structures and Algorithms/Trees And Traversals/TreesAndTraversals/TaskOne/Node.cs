@@ -19,5 +19,20 @@ namespace TaskOne
             this.Value = value;
             this.Children = new List<Node<T>>();
         }
+
+        public void PrintNodeTree()
+        {
+            this.Print(String.Empty, true);
+        }
+
+        private void Print(string prefix, bool isTail)
+        {
+            Console.WriteLine(prefix + (isTail ? "└── " : "├── ") + this.Value);
+            for (int i = 0; i < this.Children.Count - 1; i++)
+                this.Children[i].Print(prefix + (isTail ? "    " : "│   "), false);
+
+            if (this.Children.Count >= 1)
+                this.Children[this.Children.Count - 1].Print(prefix + (isTail ? "    " : "│   "), true);
+        }
     }
 }
