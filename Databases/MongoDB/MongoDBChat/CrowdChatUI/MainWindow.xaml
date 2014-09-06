@@ -1,0 +1,35 @@
+﻿<Window x:Class="CrowdChatUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Crowd Chat" Height="368.154" Width="530.147" MinHeight="368.154"
+        MinWidth="530.147"
+        MaxHeight="368.154"
+        MaxWidth="530.147">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*"/>
+            <ColumnDefinition Width="202*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="LoginGrid" Grid.Column="1" Margin="59,65,110,68" Visibility="Visible" FocusManager.FocusedElement="{Binding ElementName=LoginTB}">
+            <TextBox x:Name ="LoginTB" HorizontalAlignment="Left" Height="42" Margin="0,67,0,0" TextWrapping="Wrap" Text="" FontSize="24" VerticalContentAlignment ="Center" VerticalAlignment="Top" Width="168" Focusable="true"/>
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Enter Username" FontSize="24" VerticalAlignment="Top" Height="42" Width="168" Margin="0,10,0,0"/>
+            <Button x:Name="LoginBTN" Content="LOGIN" HorizontalAlignment="Left" Margin="0,114,0,0" VerticalAlignment="Top" Width="168" Height="44" RenderTransformOrigin="0.51,-0.077" Click="LoginBtnClick" IsDefault="true"/>
+        </Grid>
+        <Grid Name="PostsGrid" Grid.ColumnSpan="2" Margin="10" Visibility="Collapsed">
+            <TextBox x:Name="PostTB" HorizontalAlignment="Left" Height="28" Margin="0,271,0,0" TextWrapping="Wrap" Text="" FontSize="15" VerticalContentAlignment ="Center" VerticalAlignment="Center" Width="431" />
+            <Button x:Name="SendBTN" Content="Send" HorizontalAlignment="Left" Margin="436,276,0,0" VerticalAlignment="Top" Width="56" Height="28" Click="SendBtnClick" />
+            <ListView Name="PostListView"
+                  DataContext="ChatController.PostCollection" Opacity="0.7" Margin="0,0,0,42">
+                <ListView.ItemTemplate>
+                    <DataTemplate DataType="model:Post">
+                        <WrapPanel>
+                            <TextBlock Text="{Binding CreatedBy.Username}" FontWeight="ExtraBold" />
+                            <TextBlock Text=": "  FontWeight="Bold" />
+                            <TextBlock Text="{Binding Text}" TextAlignment="Right" />
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>

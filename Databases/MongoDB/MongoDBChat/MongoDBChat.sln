@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBData", "MongoDBData\MongoDBData.csproj", "{A5C237FE-909B-4FD2-AB62-C941F25A8091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBModels", "MonhoDBModels\MongoDBModels.csproj", "{F800266B-4DFE-4106-9497-CB3925DB19A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrowdChatUI", "CrowdChatUI\CrowdChatUI.csproj", "{FEF26304-C52D-498B-9B62-3C465B940FC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5C237FE-909B-4FD2-AB62-C941F25A8091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5C237FE-909B-4FD2-AB62-C941F25A8091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5C237FE-909B-4FD2-AB62-C941F25A8091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5C237FE-909B-4FD2-AB62-C941F25A8091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F800266B-4DFE-4106-9497-CB3925DB19A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F800266B-4DFE-4106-9497-CB3925DB19A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F800266B-4DFE-4106-9497-CB3925DB19A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F800266B-4DFE-4106-9497-CB3925DB19A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF26304-C52D-498B-9B62-3C465B940FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF26304-C52D-498B-9B62-3C465B940FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF26304-C52D-498B-9B62-3C465B940FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF26304-C52D-498B-9B62-3C465B940FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
