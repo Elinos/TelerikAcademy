@@ -10,13 +10,15 @@ namespace BookStore.Client
         static void Main(string[] args)
         {
             var db = new BookStoreContext();
-            var xmlParser = new XmlParser(db);
-            var booksToAdd = xmlParser.GetBooksFromXML();
+            var booksParser = new XmlParser(db, @"..\..\..\complex-books.xml");
+            var booksToAdd = booksParser.GetBooksFromXML();
             foreach (var book in booksToAdd)
             {
                 db.Books.Add(book);
                 db.SaveChanges();
             }
+            var queriesParser = new XmlParser(db, @"..\..\..\reviews-queries.xml");
+            queriesParser.GenerateQueryResults();
         }
     }
 }
