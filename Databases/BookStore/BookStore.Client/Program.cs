@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using BookStore.Data;
-using BookStore.Models;
+using BookStore.XMLParser;
 
 namespace BookStore.Client
 {
@@ -10,12 +10,13 @@ namespace BookStore.Client
         static void Main(string[] args)
         {
             var db = new BookStoreContext();
-            var book = new Book
+            var xmlParser = new XmlParser(db);
+            var booksToAdd = xmlParser.GetBooksFromXML();
+            foreach (var book in booksToAdd)
             {
-                Title = "Test"
-            };
-            db.Books.Add(book);
-            db.SaveChanges();
+                db.Books.Add(book);
+                db.SaveChanges();
+            }
         }
     }
 }

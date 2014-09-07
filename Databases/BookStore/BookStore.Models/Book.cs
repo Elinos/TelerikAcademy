@@ -23,7 +23,6 @@ namespace BookStore.Models
         [Required]
         public string Title { get; set; }
 
-        [Index("IX_ISBN", IsUnique = true)]
         [MinLength(13)]
         [MaxLength(13)]
         public string ISBN { get; set; }
