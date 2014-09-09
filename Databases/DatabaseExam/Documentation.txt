@@ -1,0 +1,38 @@
+Connection string for "Company" database:
+	Company.SimpleDataGenerator -> app.config
+connection string name="CompanyEntities"
+
+Connection string for "Cars" database:
+ 	Cars.Client -> app.config 
+	connection string name="CarsDatabase"
+
+Relationships for "Company" database: 
+
+Employees : Projects -> many to many
+Departments: Employees -> one to many
+Employees : Employees -> one to many( Managers)
+Employees : Reports -> one to many
+
+Relationships for "Cars" database: 
+
+Manufacturers : Cars -> one to many
+Dealers : Cars -> one to many
+Dealers : Cities -> one to many
+
+Query files: CompanyDatabase\Queries\
+
+Database files: 
+	CompanyDatabase\ -> screenshot, sql script and bak file
+	CompanyDatabase\ Stored Prcedures sql file
+	
+
+		 JSON Files: Cars\jsonFiles
+		 Querys: Cars\xmlQueries\Queries.xml
+		 Output: Cars\xmlQueries\Output
+
+
+
+I USE "." FOR SERVER NAME! PLEASE CHANGE IF YOU USE EXPRESS!!!
+I USE "." FOR SERVER NAME! PLEASE CHANGE IF YOU USE EXPRESS!!!
+I USE "." FOR SERVER NAME! PLEASE CHANGE IF YOU USE EXPRESS!!!
+I USE "." FOR SERVER NAME! PLEASE CHANGE IF YOU USE EXPRESS!!!

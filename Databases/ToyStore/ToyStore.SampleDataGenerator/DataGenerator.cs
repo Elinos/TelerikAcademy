@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ToyStore.Data;
 using RandomDataGenerator;
+using ToyStore.Data;
 
 namespace ToyStore.SampleDataGenerator
 {
