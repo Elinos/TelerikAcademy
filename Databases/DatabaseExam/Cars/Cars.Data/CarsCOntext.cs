@@ -1,11 +1,8 @@
-﻿using Cars.Data.Migrations;
-using Cars.Models;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Cars.Data.Migrations;
+using Cars.Models;
 
 namespace Cars.Data
 {
