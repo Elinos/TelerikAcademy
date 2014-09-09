@@ -31,9 +31,9 @@ namespace Cars.JSONParser
             {
                 Console.WriteLine("From file No {0}", i + 1);
                 currentListOfCars = this.LoadFile(rootPath + "data." + i + ".json");
+                var index = 0;
                 foreach (var car in currentListOfCars)
                 {
-                    var index = 0;
                     var currentCarToImport = new Car
                     {
                         Year = car.Year,

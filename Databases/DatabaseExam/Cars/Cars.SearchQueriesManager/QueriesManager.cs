@@ -3,6 +3,7 @@ using System.Linq;
 using System.Xml.Linq;
 using Cars.Data;
 using Cars.Models;
+using System.Globalization;
 
 namespace Cars.SearchQueriesManager
 {
@@ -75,7 +76,7 @@ namespace Cars.SearchQueriesManager
         private IQueryable<Car> ParseWhereClauses(XElement xmlQuery, IQueryable<Car> queryInCars)
         {
             var currentQuerryInCars = queryInCars;
-            var whereClauses = xmlQuery.Elements("WhereClause");
+            var whereClauses = xmlQuery.Element("WhereClauses").Elements("WhereClause");
             foreach (var whereClause in whereClauses)
             {
                 var propertyName = whereClause.Attribute("PropertyName").Value;
@@ -128,7 +129,7 @@ namespace Cars.SearchQueriesManager
             }
             else if (propertyName == "Price")
             {
-                decimal price = decimal.Parse(value);
+                decimal price = decimal.Parse(value, CultureInfo.InvariantCulture);
                 switch (typeName)
                 {
                     case "Equals":
@@ -150,7 +151,7 @@ namespace Cars.SearchQueriesManager
                 switch (typeName)
                 {
                     case "Equals":
-                        newCurrentQuery = newCurrentQuery.Where(c => c.Model == model);
+                        newCurrentQuery = newCurrentQuery.Where(c => c.Model== model);
                         break;
                     case "Contains":
                         newCurrentQuery = newCurrentQuery.Where(c => c.Model.Contains(model));
@@ -196,9 +197,7 @@ namespace Cars.SearchQueriesManager
                 {
                     case "Equals":
                         newCurrentQuery = newCurrentQuery
-                            .Where(c => c.Dealer.Cities
-                                .Where(t => t.Name == cityName)
-                                .Select(t => t.Id).FirstOrDefault() == c.Id);
+                            .Where(c => c.Dealer.Cities.Select(t => t.Name).Contains(cityName));
                         break;
                     default:
                         break;

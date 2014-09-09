@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
 
 namespace Cars.Models
 {
     public class City
     {
+        private ICollection<Dealer> dealers;
+        public City()
+        {
+            this.dealers = new HashSet<Dealer>();
+        }
+
         [Key]
         public int Id { get; set; }
 
@@ -16,5 +21,17 @@ namespace Cars.Models
         [Required]
         [Index("IX_Name", IsUnique = true)]
         public string Name { get; set; }
+
+        public virtual ICollection<Dealer> Cities
+        {
+            get
+            {
+                return this.dealers;
+            }
+            set
+            {
+                this.dealers = value;
+            }
+        }
     }
 }
