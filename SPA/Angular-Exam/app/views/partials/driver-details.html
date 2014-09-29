@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>{{driverDetails.name}}</h1>
+    <div class="row">
+        <span class="col-md-2">Upcoming trips: <strong>{{driverDetails.numberOfUpcomingTrips}}</strong></span>
+        <span class="col-md-2">Total trips: <strong>{{driverDetails.numberOfTotalTrips}}</strong></span>
+        <span class="col-md-2">
+            <label class="checkbox inline no_indent">
+                <input type="checkbox" ng-model="search.isMine"> Only mine trips
+            </label>
+        </span>
+        <span class="col-md-2">
+        <label class="checkbox inline no_indent">
+            <input type="checkbox"> Only driver trips
+        </label>
+        </span>
+        <span class="col-md-2">
+                <select class="form-control" ng-model="orderList">
+                    <option value="">None</option>
+                    <option value="from">From</option>
+                    <option value="to">To</option>
+                    <option value="-departureDate">Departure time</option>
+                </select>
+        </span>
+    </div>
+    <div class="row">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">Driver</th>
+                    <th class="text-center">From</th>
+                    <th class="text-center">To</th>
+                    <th class="text-center">Departure Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="trip in driverDetails.trips | filter: search | orderBy: orderList">
+                    <td class="text-center"><a href="#/drivers/{{trip.driverId}}">{{trip.driverName}}</a></td>
+                    <td class="text-center">{{trip.from}}</td>
+                    <td class="text-center">{{trip.to}}</td>
+                    <td class="text-center">{{trip.departureDate | date: 'MMM d, y h:mm:ss a'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

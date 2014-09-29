@@ -61,5 +61,42 @@
             response.Headers.Location = new Uri(uri);
             return response;
         }
+
+        [HttpPut]
+        public HttpResponseMessage UpdateStudent(int id, StudentTemplate updatedStudent)
+        {
+            var requestedStudentFromDb = this.data.Students.SearchFor(s => s.Id == id).FirstOrDefault();
+            if (requestedStudentFromDb == null)
+            {
+                return this.Request.CreateResponse(HttpStatusCode.NotFound, "Student not found!");
+            }
+
+            if (!this.ModelState.IsValid)
+            {
+                return this.Request.CreateResponse(HttpStatusCode.BadRequest, this.ModelState);
+            }
+
+            requestedStudentFromDb.FirstName = updatedStudent.FirstName;
+            requestedStudentFromDb.LastName = updatedStudent.LastName;
+            this.data.Students.Update(requestedStudentFromDb);
+            this.data.SaveChanges();
+
+            return this.Request.CreateResponse(HttpStatusCode.OK, "Student updated!");
+        }
+
+        [HttpDelete]
+        public HttpResponseMessage DeleteStudent(int id)
+        {
+            var requestedStudentFromDb = this.data.Students.SearchFor(s => s.Id == id).FirstOrDefault();
+            if (requestedStudentFromDb == null)
+            {
+                return this.Request.CreateResponse(HttpStatusCode.NotFound, "Student not found!");
+            }
+
+            this.data.Students.Delete(requestedStudentFromDb);
+            this.data.SaveChanges();
+
+            return this.Request.CreateResponse(HttpStatusCode.OK, "Student deleted!");
+        }
     }
 }

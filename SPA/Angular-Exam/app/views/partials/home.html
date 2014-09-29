@@ -1,0 +1,76 @@
+<div class="well">
+    <h1 class="text-center">Welcome to Trip Exchange!</h1>
+    <h2 class="text-center">Find your way home!</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="container well">
+            <div class="col-md-3 text-center">
+                <div>Trips</div>
+                <div>{{publicStats.trips}}</div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div>Finished Trips</div>
+                <div>{{publicStats.finishedTrips}}</div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div>Users</div>
+                <div>{{publicStats.users}}</div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div>Drivers</div>
+                <div>{{publicStats.drivers}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-info col-md-5">
+            <div class="panel-heading">
+                <h3 class="panel-title">Latest trips</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Driver Name</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Departure Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="trip in publicTrips">
+                            <td><a href="#/trips/{{trip.id}}">{{trip.driverName}}</a></td>
+                            <td>{{trip.from}}</td>
+                            <td>{{trip.to}}</td>
+                            <td><a>{{trip.departureDate | date: 'MMM d, y h:mm:ss a'}}</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-info col-md-5 col-md-offset-1">
+            <div class="panel-heading">
+                <h3 class="panel-title">Latest drivers</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Upcoming Trips</th>
+                            <th>Total Trips</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="driver in publicDrivers">
+                            <td><a href="#/drivers/{{driver.id}}">{{driver.name}}</a></td>
+                            <td>{{driver.numberOfUpcomingTrips}}</td>
+                            <td>{{driver.numberOfTotalTrips}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

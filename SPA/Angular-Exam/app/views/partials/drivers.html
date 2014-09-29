@@ -1,0 +1,60 @@
+<div class="container">
+    <h1 class="text-center">Drivers</h1>
+    <div class="row" ng-show="isAuthenticated">
+        <div class="col-md-2">
+            <input type="text" class="form-control" ng-model="searchedUsername"/>
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-info" ng-click="getDrivers(currentPage, searchedUsername)">Filter</button>
+        </div>
+        <div class="col-md-1  col-lg-offset-4">
+            <button class="btn btn-info"
+                    ng-click="currentPage=currentPage-1; getDrivers(currentPage, searchedUsername)"><
+            </button>
+        </div>
+
+        <div class="col-md-1">
+            <input type="text" class="form-control" ng-model="currentPage"/>
+        </div>
+        <div class="col-md-1">
+            <button class="btn btn-info"
+                    ng-click="currentPage=currentPage+1; getDrivers(currentPage, searchedUsername)"> >
+            </button>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Upcoming Trips</th>
+                    <th class="text-center">Total Trips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driver in filteredDrivers">
+                    <td class="text-center"><a href="#/drivers/{{driver.id}}">{{driver.name}}</a></td>
+                    <td class="text-center">{{driver.numberOfUpcomingTrips}}</td>
+                    <td class="text-center">{{driver.numberOfTotalTrips}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div ng-hide="filteredDrivers.length" class="text-center"><h1>No Results!</h1></div>
+    </div>
+    <div class="row" ng-hide="isAuthenticated">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Upcoming Trips</th>
+                    <th class="text-center">Total Trips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="driver in publicDrivers">
+                    <td class="text-center"><a href="#/drivers/{{driver.id}}">{{driver.name}}</a></td>
+                    <td class="text-center">{{driver.numberOfUpcomingTrips}}</td>
+                    <td class="text-center">{{driver.numberOfTotalTrips}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

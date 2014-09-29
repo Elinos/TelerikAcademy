@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="well">
+        <form name="signUpForm" class="form-horizontal" novalidate>
+            <fieldset>
+                <legend>Create New Trip</legend>
+                <div class="form-group">
+                    <label for="from" class="col-md-2 control-label">From</label>
+                    <div class="col-md-10">
+                        <select id="from" class="form-control" ng-model="trip.from" required>
+                            <option ng-repeat="city in cities" value="{{city}}">{{city}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="to" class="col-md-2 control-label">To</label>
+                    <div class="col-md-10">
+                        <select id="to" class="form-control" ng-model="trip.to" required>
+                            <option ng-repeat="city in cities" value="{{city}}">{{city}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="range" class="col-md-2 control-label">Seats</label>
+                    <div class="col-md-10">
+                        <input id="range" type="number" ng-model="trip.availableSeats" required class="form-control"
+                               min="1"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="date" class="col-md-2 control-label">Departure time</label>
+                    <div class="col-md-10">
+                        <input id="date" type="text" datetimepicker placeholder="Departure time"
+                               ng-model="trip.departureTime" required class="form-control validity"/>
+                    </div>
+                </div>
+                <div class="pull-right">
+                    <button ng-click="create(trip)" ng-disabled="signUpForm.$invalid" class="btn btn-primary">
+                        Create
+                    </button>
+                    <a href="#/trips" class="btn btn-primary">Cancel</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

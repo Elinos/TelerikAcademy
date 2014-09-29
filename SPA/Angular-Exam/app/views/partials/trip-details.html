@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <span class="col-md-3 col-md-offset-3"><h2>{{tripDetails.driverName}}</h2></span>
+        <span class="col-md-4"><h2>{{tripDetails.departureDate| date: 'MMM d, y h:mm:ss a'}}</h2></span>
+    </div>
+    <div class="row">
+        <span class="col-md-3 col-md-offset-2">From:{{tripDetails.from}}</span>
+        <span class="col-md-3">To: {{tripDetails.to}}</span>
+        <span class="col-md-3">Number of seats:{{tripDetails.numberOfFreeSeats}}</span>
+    </div>
+    <div class="row text-center">
+        <span>Passangers:</span>
+        <span ng-repeat="passanger in tripDetails.passengers">{{passanger}}</span>
+    </div>
+</div>
