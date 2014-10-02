@@ -1,0 +1,14 @@
+{
+  "name": "FileUploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kiril Tsarnakliyski",
+  "license": "MIT",
+  "dependencies": {
+    "formidable": "^1.0.15"
+  }
+}

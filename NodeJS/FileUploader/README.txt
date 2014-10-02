@@ -1,0 +1,1 @@
+Run 'npm install' before you start the app :)
