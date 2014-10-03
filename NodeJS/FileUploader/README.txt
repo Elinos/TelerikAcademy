@@ -1,1 +1,1 @@
-Run 'npm install' before you start the app :)
+Run 'npm install' and then start the server with 'npm start':)
