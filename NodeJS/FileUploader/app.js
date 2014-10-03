@@ -27,16 +27,6 @@ http.createServer(function(req, res) {
         link + '</a>');
       res.end();
     });
-  } else if (req.url === '/') {
-    res.writeHead(200, {
-      'content-type': 'text/html'
-    });
-    res.end(
-      '<form action="/upload" enctype="multipart/form-data" method="post">' +
-      '<input type="file" name="upload"><br>' +
-      '<input type="submit" value="Upload">' +
-      '</form>'
-    );
   } else {
     var uri = url.parse(req.url).pathname,
       filename = path.join(process.cwd(), uri);
@@ -50,6 +40,8 @@ http.createServer(function(req, res) {
         res.end();
         return;
       }
+
+      if (fs.statSync(filename).isDirectory()) filename += '/index.html';
 
       fs.readFile(filename, "binary", function(err, file) {
         if (err) {
