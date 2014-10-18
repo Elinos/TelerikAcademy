@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Summator Page";
+}
+@model SummatorInASPMVC.Models.SummatorModel
+
+@using (Html.BeginForm("Sum", "Summator"))
+{
+    <form class="form-horizontal">
+        <fieldset>
+            <legend>Summator</legend>
+            <div class="form-group">
+                @Html.LabelFor(m => m.FirstNumber)
+                @Html.TextBoxFor(m => m.FirstNumber, new { @class = "form-control", autocomplete = "off" })
+            </div>
+            <div class="form-group">
+
+                @Html.LabelFor(m => m.SecondNumber)
+                @Html.TextBoxFor(m => m.SecondNumber, new { @class = "form-control", autocomplete = "off" })
+            </div>
+            <input type="submit" value="Sum" class="btn btn-info" />
+        </fieldset>
+    </form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Result)
+        @Html.TextBoxFor(m => m.Result, new { @class = "form-control", autocomplete = "off" })
+    </div>
+}
