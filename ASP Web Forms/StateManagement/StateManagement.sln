@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Browser", "Browser\Browser.csproj", "{F5FED2B3-8DB1-4D60-917F-3788AF055DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SavedText", "SavedText\SavedText.csproj", "{F2F6B6ED-B55A-4EAA-98D0-A494AA7700FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookies", "Cookies\Cookies.csproj", "{305FF10F-F6BC-40E9-8171-05B76AFA2652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5FED2B3-8DB1-4D60-917F-3788AF055DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FED2B3-8DB1-4D60-917F-3788AF055DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FED2B3-8DB1-4D60-917F-3788AF055DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FED2B3-8DB1-4D60-917F-3788AF055DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F6B6ED-B55A-4EAA-98D0-A494AA7700FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F6B6ED-B55A-4EAA-98D0-A494AA7700FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F6B6ED-B55A-4EAA-98D0-A494AA7700FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F6B6ED-B55A-4EAA-98D0-A494AA7700FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{305FF10F-F6BC-40E9-8171-05B76AFA2652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{305FF10F-F6BC-40E9-8171-05B76AFA2652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{305FF10F-F6BC-40E9-8171-05B76AFA2652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{305FF10F-F6BC-40E9-8171-05B76AFA2652}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
